@@ -73,8 +73,7 @@ export const ebooks: EbookData[] = [
     metaTitle: "Mulher 360 | Protocolo de Hidratação",
     description:
       "Descubra como usar a hidratação de forma estratégica para reduzir fome, retenção e inchaço com um protocolo simples, direto e aplicável à rotina.",
-    // TODO: Update checkout link with the real URL.
-    checkoutUrl: "https://checkout-example.com",
+    checkoutUrl: "https://pay.hotmart.com/I105279156Y",
     priceFrom: "97,00",
     priceTo: "27,00",
     catalogDescription:
