@@ -186,6 +186,137 @@ export const ebooks: EbookData[] = [
         answer: "Sim. A oferta informada para esta página inclui garantia incondicional de 7 dias."
       }
     ]
+  },
+  {
+    slug: "escala-do-doce",
+    title: "Escala do Doce",
+    metaTitle: "Mulher 360 | Escala do Doce",
+    description:
+      "Um guia prático para escolher doces com mais consciência, equilíbrio e autonomia, entendendo quais opções cabem melhor na rotina e quais devem ficar para momentos ocasionais.",
+    checkoutUrl: "https://pay.hotmart.com/O105538410S",
+    priceFrom: "97,00",
+    priceTo: "27,00",
+    catalogDescription:
+      "Guia prático para entender a escala do doce, diferenciar melhores escolhas, boas opções e doces ocasionais, além de aprender o melhor momento para consumir.",
+    searchTerms: [
+      "escala do doce",
+      "doce",
+      "doces",
+      "chocolate",
+      "sobremesa",
+      "equilibrio",
+      "escolhas inteligentes",
+      "mulher 360"
+    ],
+    cover: {
+      brand: "Mulher 360",
+      title: "Escala do Doce",
+      titleLine1: "Escala",
+      titleLine2: "do Doce",
+      subtitle: "Do melhor ao mais ocasional: escolhas inteligentes para mais equilíbrio e menos culpa.",
+      signedByLabel: "Assinado por",
+      signedBy: "Dra. Luciana Teixeira"
+    },
+    hero: {
+      eyebrow: "Ebook digital",
+      title: "Aprenda a escolher doces com mais consciência, equilíbrio e menos culpa.",
+      description:
+        "Um guia prático para entender quais doces podem aparecer com mais frequência, quais pedem moderação e quais devem ficar para momentos ocasionais, sem restrições extremas e sem a sensação de perder o controle.",
+      primaryCta: "Quero acessar o guia",
+      secondaryCta: "Ver a escala do doce"
+    },
+    problem: {
+      title: "A relação com o doce pode virar um ciclo de culpa, excesso e perda de controle.",
+      description:
+        "O guia parte de uma dificuldade comum: querer consumir doces, mas não saber diferenciar melhores escolhas das opções que devem aparecer com menos frequência. Sem clareza, o doce pode ser vivido como proibição ou exagero, em vez de uma escolha consciente dentro da rotina."
+    },
+    solution: {
+      title: "Organizar os doces em uma escala simples: do melhor ao mais ocasional.",
+      description:
+        "A Escala do Doce apresenta níveis de escolha para o dia a dia, consumo moderado, consumo ocasional e opções mais críticas. O material também orienta o melhor momento para consumir: preferencialmente após refeições principais, e não de forma isolada."
+    },
+    benefits: [
+      {
+        title: "Mais consciência nas escolhas",
+        text: "Você aprende a diferenciar opções mais nutritivas, boas opções com açúcar, doces ocasionais e escolhas mais críticas para deixar para momentos específicos."
+      },
+      {
+        title: "Menos culpa e menos extremos",
+        text: "A proposta do guia não é proibir o doce, mas ajudar você a construir uma relação mais leve, inteligente e equilibrada com ele."
+      },
+      {
+        title: "Melhor momento para consumir",
+        text: "O material explica por que, sempre que possível, o doce deve ser consumido após refeições, quando proteína, fibras e gordura tornam a digestão mais lenta."
+      },
+      {
+        title: "Mais controle da fome",
+        text: "Ao evitar o consumo de doce em jejum ou isolado, o guia busca reduzir picos rápidos de glicose, que podem gerar mais fome, cansaço e vontade de comer novamente."
+      }
+    ],
+    contentSection: {
+      title: "O que você vai encontrar no material.",
+      description:
+        "O ebook organiza os doces em níveis claros para facilitar decisões mais leves e saudáveis no dia a dia.",
+      points: [
+        "Nível 1: melhores escolhas para uso mais frequente, como frutas in natura, fruta com iogurte natural, banana com canela ou cacau, iogurte natural com fruta e abacate com cacau",
+        "Nível 2: boas opções para consumo moderado, como chocolate 70% cacau ou mais, mel em pequenas quantidades, doces caseiros simples e barras proteicas de boas marcas",
+        "Níveis 3 e 4: doces ocasionais e escolhas mais críticas, como chocolate ao leite, bolos simples, sobremesas caseiras, doces industrializados, recheados, fast food doce, sorvetes industrializados e combinações com muito açúcar e gordura",
+        "Regras de ouro para consumir doce com mais consciência: preferir após refeições, observar quantidade e entender que frequência é o que mais impacta o resultado"
+      ]
+    },
+    author: {
+      name: "Dra. Luciana Teixeira",
+      roleDescription:
+        "Nutricionista com foco no cuidado integral da mulher, unindo ciência, empatia e propósito em uma abordagem que considera corpo, mente e espírito.",
+      bio:
+        "Pós-graduanda em Neurociência e estudante de Educação Física e Fonoaudiologia, desenvolveu o projeto Mulher 360 para ajudar mulheres a resgatarem a autoestima, reconectarem-se com sua essência e construírem uma relação mais consciente com a alimentação.",
+      imageSrc: "/images/autora.png",
+      imageAlt: "Dra. Luciana Teixeira"
+    },
+    offer: {
+      title: "Um guia prático para decidir melhor quando a vontade de doce aparecer.",
+      description: "Pagamento em até 3x e garantia incondicional de 7 dias.",
+      primaryCta: "Quero garantir meu acesso",
+      secondaryCta: "Ver perguntas frequentes",
+      deliverables: [
+        "Guia Escala do Doce - Do melhor ao mais ocasional, em formato digital.",
+        "Classificação prática dos doces em níveis: melhores escolhas, boas opções, ocasionais e mais críticos.",
+        "Regras de ouro para escolher melhor o momento, a quantidade e a frequência do consumo."
+      ]
+    },
+    finalCta: {
+      title: "Você não precisa parar de comer doce, só precisa saber em qual lugar ele entra na sua rotina.",
+      description:
+        "Se a sua dificuldade é equilibrar vontade, escolhas e frequência, este guia entrega uma escala simples para decidir com mais consciência e menos culpa.",
+      primaryCta: "Quero acessar o ebook"
+    },
+    faqs: [
+      {
+        question: "Esse ebook ensina a parar de comer doce?",
+        answer:
+          "Não. A proposta do material é mostrar que você não precisa deixar de viver nem parar de comer doce, mas aprender a escolher melhor e entender onde cada opção entra na rotina."
+      },
+      {
+        question: "O guia proíbe algum tipo de doce?",
+        answer:
+          "Não. O conteúdo organiza os doces por frequência e impacto, indicando melhores escolhas para a rotina e opções mais críticas para consumo consciente e sem frequência."
+      },
+      {
+        question: "Qual é o melhor momento para comer doce?",
+        answer:
+          "Segundo o guia, sempre que possível, o doce deve ser consumido após refeições, porque proteína, fibras e gordura tornam a digestão mais lenta e o açúcar tende a ser absorvido de forma mais gradual."
+      },
+      {
+        question: "Quais doces aparecem como melhores escolhas?",
+        answer:
+          "O Nível 1 inclui frutas in natura, fruta com iogurte natural, banana com canela ou cacau, iogurte natural com fruta e abacate com cacau."
+      },
+      {
+        question: "O que mais impacta o resultado?",
+        answer:
+          "O guia resume que quantidade importa mais que proibição e que frequência é o que mais impacta o resultado."
+      }
+    ]
   }
 ];
 
