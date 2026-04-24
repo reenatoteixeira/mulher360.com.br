@@ -1,0 +1,227 @@
+---
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  navigation: NavItem[];
+  activeHref?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  ctaDataAttr?: string;
+  compactNav?: boolean;
+}
+
+const { navigation, activeHref, ctaLabel, ctaHref, ctaDataAttr, compactNav = false } = Astro.props;
+---
+
+<header class="site-header fixed inset-x-0 top-0 z-50" data-site-header data-open="false">
+  <div class="section-shell pt-4 sm:pt-5">
+    <div class="site-header-shell rounded-[2rem] px-4 py-3 sm:px-6 sm:py-4">
+      <div class="flex items-center justify-between gap-4">
+        <a class="inline-flex items-center no-underline" href="/" aria-label="Mulher 360">
+          <img
+            src="/favicon.svg"
+            alt="Mulher 360"
+            class="h-9 w-auto sm:h-10"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <div class:list={[compactNav ? "flex items-center gap-3" : "hidden items-center gap-3 lg:flex"]}>
+          {navigation.map((item, index) => (
+            <a
+              class:list={[
+                "header-link text-sm font-medium no-underline",
+                item.href === activeHref ? "text-[color:var(--primary-strong)]" : "text-[color:var(--muted)]",
+                ctaLabel && index === navigation.length - 1 && "mr-3"
+              ]}
+              href={item.href}
+              data-header-link
+              aria-current={item.href === activeHref ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+
+          {ctaLabel && ctaHref && (
+            <a class="cta-main header-cta" href={ctaHref} data-cta={ctaDataAttr}>{ctaLabel}</a>
+          )}
+        </div>
+
+        {!compactNav && (
+          <button
+            class="mobile-nav-toggle inline-flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(35,24,21,0.1)] bg-white/70 text-[color:var(--text)] transition lg:hidden"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-nav-panel"
+            data-mobile-nav-toggle
+          >
+            <span class="sr-only">Abrir menu</span>
+            <svg class="mobile-nav-icon h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path class="mobile-nav-line mobile-nav-line-top" d="M4 6H16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              <path class="mobile-nav-line mobile-nav-line-middle" d="M4 10H16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              <path class="mobile-nav-line mobile-nav-line-bottom" d="M4 14H16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        )}
+      </div>
+
+      {!compactNav && (
+        <div
+          id="mobile-nav-panel"
+          class="mobile-nav-panel lg:hidden"
+          aria-hidden="true"
+          data-mobile-nav-panel
+        >
+          <div class="flex flex-col gap-2 border-t border-[rgba(35,24,21,0.08)] pt-4">
+            {navigation.map((item) => (
+              <a
+                class:list={[
+                  "mobile-nav-link",
+                  item.href === activeHref && "text-[color:var(--primary-strong)]"
+                ]}
+                href={item.href}
+                data-header-link
+                aria-current={item.href === activeHref ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+
+            {ctaLabel && ctaHref && (
+              <a class="cta-main header-cta mt-2" href={ctaHref} data-cta={ctaDataAttr}>{ctaLabel}</a>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const initSiteHeader = () => {
+    const headerLinks = Array.from(document.querySelectorAll("[data-header-link]"));
+    const siteHeader = document.querySelector("[data-site-header]");
+    const mobileNavToggle = document.querySelector("[data-mobile-nav-toggle]");
+    const mobileNavPanel = document.querySelector("[data-mobile-nav-panel]");
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+    if (siteHeader instanceof HTMLElement) {
+      const syncHeaderScrollState = () => {
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 18);
+      };
+
+      syncHeaderScrollState();
+      window.addEventListener("scroll", syncHeaderScrollState, { passive: true });
+    }
+
+    if (
+      siteHeader instanceof HTMLElement &&
+      mobileNavToggle instanceof HTMLButtonElement &&
+      mobileNavPanel instanceof HTMLElement
+    ) {
+      const setMobileNavOpen = (open) => {
+        siteHeader.dataset.open = String(open);
+        mobileNavToggle.setAttribute("aria-expanded", String(open));
+        mobileNavPanel.setAttribute("aria-hidden", String(!open));
+
+        if (open) {
+          mobileNavPanel.style.height = `${mobileNavPanel.scrollHeight}px`;
+        } else {
+          mobileNavPanel.style.height = `${mobileNavPanel.scrollHeight}px`;
+          requestAnimationFrame(() => {
+            mobileNavPanel.style.height = "0px";
+          });
+        }
+      };
+
+      mobileNavToggle.addEventListener("click", () => {
+        const isOpen = siteHeader.dataset.open === "true";
+        setMobileNavOpen(!isOpen);
+      });
+
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          setMobileNavOpen(false);
+        });
+      });
+
+      mobileNavPanel.addEventListener("transitionend", (event) => {
+        if (event.propertyName !== "height") return;
+        if (siteHeader.dataset.open === "true") {
+          mobileNavPanel.style.height = "auto";
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) {
+          setMobileNavOpen(false);
+        } else if (siteHeader.dataset.open === "true") {
+          mobileNavPanel.style.height = `${mobileNavPanel.scrollHeight}px`;
+        }
+      });
+    }
+
+    const hashLinkGroups = new Map();
+
+    headerLinks.forEach((link) => {
+      if (!(link instanceof HTMLAnchorElement)) return;
+      const url = new URL(link.href, window.location.origin);
+      const targetId = decodeURIComponent(url.hash.replace(/^#/, ""));
+
+      if (!targetId || url.pathname !== window.location.pathname) return;
+
+      const linksForTarget = hashLinkGroups.get(targetId) || [];
+      linksForTarget.push(link);
+      hashLinkGroups.set(targetId, linksForTarget);
+    });
+
+    if (hashLinkGroups.size > 0) {
+      const sections = Array.from(hashLinkGroups.keys())
+        .map((id) => document.getElementById(id))
+        .filter((section) => section instanceof HTMLElement);
+
+      const syncActiveSection = () => {
+        if (sections.length === 0) return;
+
+        const headerHeight = siteHeader instanceof HTMLElement ? siteHeader.offsetHeight : 0;
+        const activationOffset = headerHeight + 32;
+        let activeId = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          const activationPoint = window.scrollY + activationOffset;
+
+          if (activationPoint >= sectionTop && activationPoint < sectionBottom) {
+            activeId = section.id;
+          }
+        });
+
+        hashLinkGroups.forEach((links, id) => {
+          links.forEach((link) => {
+            link.classList.toggle("is-active", id === activeId);
+            if (id === activeId) {
+              link.setAttribute("aria-current", "location");
+            } else if (link.getAttribute("aria-current") === "location") {
+              link.removeAttribute("aria-current");
+            }
+          });
+        });
+      };
+
+      syncActiveSection();
+      window.addEventListener("scroll", syncActiveSection, { passive: true });
+      window.addEventListener("resize", syncActiveSection);
+    }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSiteHeader, { once: true });
+  } else {
+    initSiteHeader();
+  }
+</script>

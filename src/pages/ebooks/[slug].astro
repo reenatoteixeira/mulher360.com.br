@@ -1,0 +1,16 @@
+---
+import EbookLandingPage from "../../components/EbookLandingPage.astro";
+import { ebooks, getEbookBySlug } from "../../data/ebooks";
+
+export function getStaticPaths() {
+  return ebooks.map((ebook) => ({
+    params: { slug: ebook.slug },
+    props: { ebook }
+  }));
+}
+
+const { ebook } = Astro.props;
+const resolvedEbook = ebook ?? getEbookBySlug(Astro.params.slug ?? "");
+---
+
+<EbookLandingPage ebook={resolvedEbook} />

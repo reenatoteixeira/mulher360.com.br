@@ -1,0 +1,379 @@
+---
+import type { EbookData } from "../data/ebooks";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteFooter from "./SiteFooter.astro";
+import SiteHeader from "./SiteHeader.astro";
+
+interface Props {
+  ebook: EbookData;
+}
+
+const { ebook } = Astro.props;
+const canonical = `https://mulher360.com.br/ebooks/${ebook.slug}`;
+const headerLinks = [
+  { label: "Benefícios", href: "#beneficios" },
+  { label: "Conteúdo", href: "#conteudo" },
+  { label: "Autora", href: "#autora" },
+  { label: "Oferta", href: "#oferta" },
+  { label: "Dúvidas", href: "#faq" }
+];
+const footerLinks = [
+  { label: "Página inicial", href: "/" },
+  { label: "Catálogo de ebooks", href: "/ebooks" },
+  { label: "Conteúdo", href: "#conteudo" },
+  { label: "Autora", href: "#autora" },
+  { label: "Oferta", href: "#oferta" },
+  { label: "Dúvidas", href: "#faq" }
+];
+---
+
+<BaseLayout title={ebook.metaTitle} description={ebook.description} canonical={canonical}>
+  <main id="top" class="overflow-x-clip">
+    <SiteHeader
+      navigation={headerLinks}
+      ctaLabel="Quero meu acesso"
+      ctaHref={ebook.checkoutUrl}
+      ctaDataAttr="header"
+    />
+
+    <section class="relative isolate pb-20 pt-24 sm:pb-24 sm:pt-28">
+      <div class="floating-orb -left-12 top-12 h-32 w-32 bg-[#f2cc95]"></div>
+      <div class="floating-orb right-0 top-28 h-40 w-40 bg-[#e8b17a]"></div>
+
+      <div class="section-shell">
+        <div class="grid items-center gap-10 pb-8 pt-8 lg:grid-cols-[1.1fr_0.9fr] lg:pb-16 lg:pt-16">
+          <div class="fade-rise">
+            <span class="eyebrow">{ebook.hero.eyebrow}</span>
+            <h1 class="mt-5 max-w-3xl text-[2.5rem] font-semibold leading-[0.92] sm:mt-6 sm:text-6xl lg:text-7xl">
+              {ebook.hero.title}
+            </h1>
+            <p class="mt-5 max-w-2xl text-[0.95rem] leading-7 text-[color:var(--muted)] sm:mt-6 sm:text-lg">
+              {ebook.hero.description}
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a class="cta-main hero-cta-primary pulse-soft" href={ebook.checkoutUrl} data-cta="hero-primary">{ebook.hero.primaryCta}</a>
+              <a class="cta-secondary hero-cta-secondary" href="#conteudo">{ebook.hero.secondaryCta}</a>
+            </div>
+          </div>
+
+          <div class="fade-rise-delay relative mx-auto w-full max-w-[25rem] px-3 sm:px-0">
+            <div class="book-tilt relative rounded-[2rem] border border-[color:var(--line)] bg-[#1f1512] p-4 shadow-[0_40px_80px_rgba(72,37,20,0.28)] sm:p-5">
+              <div class="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,#18110f_0%,#30211c_38%,#bb5b27_100%)] px-5 py-6 text-white sm:px-7 sm:py-8">
+                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[#f7d3ab]">{ebook.cover.brand}</p>
+                <h2 class="mt-6 font-display text-[2rem] font-semibold leading-none sm:mt-8 sm:text-5xl">
+                  {ebook.cover.title}
+                </h2>
+                <p class="mt-4 max-w-xs text-sm leading-6 text-white/80">
+                  {ebook.cover.subtitle}
+                </p>
+                <div class="mt-8 rounded-[1.25rem] border border-white/15 bg-white/10 p-4 sm:mt-10">
+                  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-[#f7d3ab]">{ebook.cover.signedByLabel}</p>
+                  <p class="mt-2 text-lg font-semibold">{ebook.cover.signedBy}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-20">
+      <div class="section-shell">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <article class="section-card rounded-[2rem] p-6 sm:p-8">
+            <span class="eyebrow">Problema</span>
+            <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">{ebook.problem.title}</h2>
+            <p class="mt-5 text-base leading-7 text-[color:var(--muted)]">{ebook.problem.description}</p>
+          </article>
+
+          <article class="section-card rounded-[2rem] p-6 sm:p-8">
+            <span class="eyebrow">Solução</span>
+            <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">{ebook.solution.title}</h2>
+            <p class="mt-5 text-base leading-7 text-[color:var(--muted)]">{ebook.solution.description}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <span class="eyebrow">Benefícios</span>
+            <h2 class="mt-5 max-w-2xl text-[1.8rem] font-semibold sm:text-4xl">O que esse protocolo ajuda você a entender e aplicar.</h2>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
+          {ebook.benefits.map((card) => (
+            <article class="section-card rounded-[1.75rem] p-5 sm:p-6">
+              <h3 class="text-[1.6rem] font-semibold sm:text-2xl">{card.title}</h3>
+              <p class="mt-4 text-base leading-7 text-[color:var(--muted)]">{card.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <div class="section-card rounded-[2.25rem] p-6 sm:p-10">
+          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <span class="eyebrow">Conteúdo do Ebook</span>
+              <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">{ebook.contentSection.title}</h2>
+              <p class="mt-5 text-base leading-7 text-[color:var(--muted)]">
+                {ebook.contentSection.description}
+              </p>
+            </div>
+
+            <div class="grid gap-4">
+              {ebook.contentSection.points.map((point, index) => (
+                <div class="flex gap-3 rounded-[1.5rem] border border-[color:var(--line)] bg-white/60 p-4 sm:gap-4 sm:p-5">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[rgba(187,91,39,0.12)] font-semibold text-[color:var(--primary-strong)] sm:h-10 sm:w-10">
+                    {index + 1}
+                  </div>
+                  <p class="text-base leading-7 text-[color:var(--muted)]">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="autora" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <article class="section-card rounded-[2rem] p-6 sm:p-8 lg:p-10">
+          <span class="eyebrow">Sobre a Autora</span>
+
+          <div class="author-intro mt-5">
+            <div class="author-avatar">
+              <img
+                src={ebook.author.imageSrc}
+                alt={ebook.author.imageAlt}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div>
+              <h2 class="text-[1.8rem] font-semibold sm:text-4xl">{ebook.author.name}</h2>
+              <p class="mt-3 text-base leading-7 text-[color:var(--muted)]">
+                {ebook.author.roleDescription}
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-6 text-base leading-7 text-[color:var(--muted)]">
+            {ebook.author.bio}
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="oferta" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <div class="section-card rounded-[2.25rem] p-6 sm:p-10">
+          <div class="grid gap-10 lg:grid-cols-[1fr_0.95fr]">
+            <div>
+              <span class="eyebrow">Oferta</span>
+              <h2 class="mt-5 max-w-2xl text-[1.8rem] font-semibold sm:text-4xl">{ebook.offer.title}</h2>
+              <div class="offer-price-stack mt-8">
+                <span class="offer-price-old">de R$ {ebook.priceFrom}</span>
+                <span class="offer-price-current font-display font-semibold">R$ {ebook.priceTo}</span>
+              </div>
+              <p class="mt-3 text-base leading-7 text-[color:var(--muted)]">{ebook.offer.description}</p>
+
+              <div class="offer-actions mt-8">
+                <a class="cta-main offer-cta-primary" href={ebook.checkoutUrl} data-cta="offer-primary">{ebook.offer.primaryCta}</a>
+                <a class="cta-secondary" href="#faq">{ebook.offer.secondaryCta}</a>
+              </div>
+            </div>
+
+            <div class="rounded-[1.75rem] border border-[color:var(--line)] bg-white/60 p-5 sm:p-6">
+              <h3 class="text-[1.6rem] font-semibold sm:text-2xl">Você recebe</h3>
+              <ul class="mt-5 space-y-4 text-base leading-7 text-[color:var(--muted)]">
+                {ebook.offer.deliverables.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-20">
+      <div class="section-shell">
+        <div class="rounded-[2.25rem] border border-[color:var(--line)] bg-[linear-gradient(135deg,#2f1f1a_0%,#5a2a12_50%,#bb5b27_100%)] px-6 py-8 text-white shadow-[0_36px_80px_rgba(96,54,34,0.24)] sm:px-10 sm:py-10">
+          <h2 class="mt-5 max-w-3xl text-[1.8rem] font-semibold sm:text-4xl">
+            {ebook.finalCta.title}
+          </h2>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-white/80">
+            {ebook.finalCta.description}
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a class="cta-light" href={ebook.checkoutUrl} data-cta="final-primary">{ebook.finalCta.primaryCta}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="scroll-mt-28 pb-28 sm:scroll-mt-32 sm:pb-24">
+      <div class="section-shell">
+        <div class="grid gap-6 lg:grid-cols-[0.78fr_1.22fr]">
+          <div>
+            <span class="eyebrow">Dúvidas</span>
+            <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">Perguntas frequentes</h2>
+          </div>
+          <div class="space-y-4">
+            {ebook.faqs.map((item, index) => (
+              <div class="faq-item section-card cursor-pointer rounded-[1.5rem] p-5 sm:p-6" data-open="false">
+                <button
+                  class="faq-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls={`faq-panel-${index}`}
+                >
+                  <span class="pr-2 text-lg font-semibold">{item.question}</span>
+                  <svg
+                    class="faq-chevron h-5 w-5 text-[color:var(--primary-strong)]"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 7.5L10 12.5L15 7.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id={`faq-panel-${index}`}
+                  class="faq-panel"
+                  role="region"
+                  aria-hidden="true"
+                >
+                  <p class="text-base leading-7 text-[color:var(--muted)]">{item.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter links={footerLinks} />
+
+    <div class="fixed inset-x-0 bottom-0 z-50 border-t border-[color:var(--line)] bg-[rgba(255,250,247,0.92)] px-4 py-3 shadow-[0_-20px_40px_rgba(46,26,16,0.12)] backdrop-blur md:hidden">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-3">
+        <div>
+          <p class="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-[color:var(--primary-strong)]">Oferta promocional</p>
+          <p class="text-xs font-semibold text-[color:var(--text)]">R$ {ebook.priceTo} • até 3x</p>
+        </div>
+        <a class="cta-main cta-inline-compact shrink-0 px-4 py-3 text-[0.7rem]" href={ebook.checkoutUrl} data-cta="mobile-sticky">Quero acessar</a>
+      </div>
+    </div>
+  </main>
+
+  <script is:inline define:vars={{ checkoutUrl: ebook.checkoutUrl }}>
+    const sendEvent = (eventName, params = {}) => {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, params);
+      }
+    };
+
+    sendEvent("page_view", {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    });
+
+    let sentScroll = false;
+    const onScroll = () => {
+      if (sentScroll) return;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      const progress = (window.scrollY / scrollable) * 100;
+      if (progress >= 60) {
+        sentScroll = true;
+        sendEvent("scroll", {
+          percent_scrolled: 60,
+          page_path: window.location.pathname
+        });
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    document.querySelectorAll("[data-cta]").forEach((element) => {
+      element.addEventListener("click", () => {
+        const ctaName = element.getAttribute("data-cta") || "unknown";
+        sendEvent("cta_click", {
+          cta_name: ctaName,
+          destination: checkoutUrl,
+          page_path: window.location.pathname
+        });
+        sendEvent("checkout_exit", {
+          cta_name: ctaName,
+          destination: checkoutUrl,
+          outbound: true
+        });
+      });
+    });
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const trigger = item.querySelector(".faq-trigger");
+      const panel = item.querySelector(".faq-panel");
+
+      if (!(trigger instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) return;
+
+      const setOpen = (open) => {
+        item.dataset.open = String(open);
+        trigger.setAttribute("aria-expanded", String(open));
+        panel.setAttribute("aria-hidden", String(!open));
+
+        if (open) {
+          panel.style.height = `${panel.scrollHeight}px`;
+        } else {
+          panel.style.height = `${panel.scrollHeight}px`;
+          requestAnimationFrame(() => {
+            panel.style.height = "0px";
+          });
+        }
+      };
+
+      item.addEventListener("click", () => {
+        const isOpen = item.dataset.open === "true";
+
+        faqItems.forEach((otherItem) => {
+          if (!(otherItem instanceof HTMLElement) || otherItem === item) return;
+          const otherTrigger = otherItem.querySelector(".faq-trigger");
+          const otherPanel = otherItem.querySelector(".faq-panel");
+
+          if (!(otherTrigger instanceof HTMLButtonElement) || !(otherPanel instanceof HTMLElement)) return;
+
+          otherItem.dataset.open = "false";
+          otherTrigger.setAttribute("aria-expanded", "false");
+          otherPanel.setAttribute("aria-hidden", "true");
+          otherPanel.style.height = "0px";
+        });
+
+        setOpen(!isOpen);
+      });
+
+      panel.addEventListener("transitionend", (event) => {
+        if (event.propertyName !== "height") return;
+        if (item.dataset.open === "true") {
+          panel.style.height = "auto";
+        }
+      });
+    });
+  </script>
+</BaseLayout>

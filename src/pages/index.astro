@@ -1,0 +1,589 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+
+const canonical = "https://mulher360.com.br/";
+const title = "Mulher 360 | Terapia Nutricional Integrativa";
+const description =
+  "Conheça a Dra. Luciana Teixeira e o método Mulher 360, uma abordagem integrativa que une nutrição, autocuidado e equilíbrio emocional.";
+
+const navigation = [
+  { label: "Sobre", href: "#sobre" },
+  { label: "Como funciona", href: "#como-funciona" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Abordagem", href: "#metodologia" },
+  { label: "Guias", href: "#ebooks" },
+  { label: "Dúvidas", href: "#faq" }
+];
+const footerLinks = navigation;
+
+const specialties = [
+  "Nutrição Integrativa",
+  "Saúde da Mulher",
+  "Neuronutrição",
+  "Saúde Emocional",
+  "Mindful Eating",
+  "Autoestima",
+  "Imagem Corporal"
+];
+
+const steps = [
+  {
+    number: "01",
+    title: "Primeiro Contato",
+    text:
+      "Entre em contato via WhatsApp ou Instagram. Vamos conversar sobre suas necessidades e objetivos de forma acolhedora e sem julgamentos."
+  },
+  {
+    number: "02",
+    title: "Consulta Inicial",
+    text:
+      "Avaliação completa que vai além do aspecto nutricional. Exploramos sua história alimentar, emocional e estilo de vida de forma integrada."
+  },
+  {
+    number: "03",
+    title: "Plano Personalizado",
+    text:
+      "Desenvolvimento de um protocolo único para você, integrando aspectos nutricionais, comportamentais e de autocuidado."
+  },
+  {
+    number: "04",
+    title: "Acompanhamento",
+    text:
+      "Sessões regulares de suporte e ajustes, com foco na transformação gradual e sustentável da sua relação com a alimentação."
+  }
+];
+
+const testimonials = [
+  {
+    name: "Cris Gomes",
+    age: "52",
+    avatar: "/avatars/testimonial-1.svg",
+    content:
+      "Depois de tantas tentativas frustradas de emagrecimento, finalmente encontrei equilíbrio com a ajuda da Dra. Luciana. Aprendi que cuidar da alimentação não é sobre restrições, mas sobre consciência e bem-estar especialmente agora, na menopausa. O acompanhamento dela tem sido essencial para eu me sentir mais saudável, disposta e confiante nessa nova fase. Sou muito grata por todo o cuidado e orientação!"
+  },
+  {
+    name: "Liliana Souza",
+    age: "53",
+    avatar: "/avatars/testimonial-2.svg",
+    content:
+      "Tenho 53 anos e, com a chegada da menopausa, ganhei muito peso e enfrentei dificuldades para eliminá-lo, mesmo reduzindo a alimentação. Sentia os incômodos típicos dessa fase e nada parecia funcionar. Com o plano alimentar anti-inflamatório da Dra. Luciana, usando comida de verdade e ingredientes do dia a dia, consegui eliminar 3,2 kg em menos de um mês, sem sacrifícios. Além da perda de peso, os sintomas da menopausa melhoraram muito. Para mim, está sendo uma vitória contínua, com mais disposição e qualidade de vida. Só gratidão!"
+  },
+  {
+    name: "Estella Taylor",
+    age: "39",
+    avatar: "/avatars/testimonial-3.svg",
+    content:
+      "Com 39 anos, percebi que precisava cuidar mais da minha saúde, mas não sabia por onde começar. A Dra. Luciana me ajudou a entender meu corpo, superar limitações e iniciar uma jornada mais leve e equilibrada. Com sua orientação e apoio, comecei a alcançar objetivos que antes pareciam distantes. Sou imensamente grata pela dedicação e profissionalismo. Ela é uma nutricionista excepcional!"
+  },
+  {
+    name: "Ana Beatriz",
+    age: "28",
+    avatar: "/avatars/testimonial-4.svg",
+    content:
+      "Desde a adolescência luto contra a balança, passando por fases difíceis com compulsão alimentar e ansiedade. Já tentei dietas restritivas com vários médicos, mas nada funcionava. O que eu deixava de comer, acabava comendo em dobro nos momentos de estresse. Após o parto, desenvolvi resistência insulínica sem saber o impacto disso no meu corpo, até começar o tratamento com a Dra. Luciana. Ela não apenas me ajudou a entender meu organismo, mas também ofereceu apoio emocional, com carinho e escuta verdadeira. Para mim, ela é mais que uma nutricionista, é uma terapeuta, amiga e rede de apoio. O processo de emagrecimento é difícil, mas com alguém como ela, tudo se torna mais leve."
+  }
+];
+
+const methodology = [
+  {
+    title: "Nutrição Comportamental",
+    text:
+      "Trabalhamos os aspectos psicológicos da alimentação, identificando padrões e criando novos hábitos saudáveis de forma gradual e sustentável."
+  },
+  {
+    title: "Suporte à Alimentação Emocional",
+    text:
+      "Desenvolvemos estratégias para lidar com gatilhos emocionais, ansiedade e compulsões, promovendo uma relação equilibrada com a comida."
+  },
+  {
+    title: "Rotinas de Autocuidado",
+    text:
+      "Criamos práticas personalizadas de autocuidado que vão além da alimentação, incluindo mindfulness, sono e bem-estar emocional."
+  }
+];
+
+const faqs = [
+  {
+    question: "Para quem é indicada a terapia nutricional personalizada?",
+    answer:
+      "Para quem busca cuidar da saúde de forma individual e equilibrada — corpo, mente e emoções. Indicada especialmente para mulheres que querem emagrecer sem restrições, ganhar massa muscular, controlar sintomas hormonais, dormir melhor, lidar com ansiedade e prevenir doenças. O plano é personalizado, respeita sua rotina e objetivos, com foco em sustentabilidade e acolhimento."
+  },
+  {
+    question: "Vocês trabalham com planos alimentares restritivos?",
+    answer:
+      "Não. Nosso foco é criar planos flexíveis e personalizados, respeitando suas preferências, rotina e saúde emocional, evitando dietas restritivas que geram culpa e ansiedade. A proposta é desenvolver hábitos saudáveis e duradouros, com equilíbrio, prazer e autonomia alimentar."
+  },
+  {
+    question: "Vocês recomendam suplementação?",
+    answer:
+      "Somente quando necessário, com base em sintomas, exames ou dificuldades alimentares. A prioridade é sempre uma alimentação equilibrada. Quando indicada, a suplementação é personalizada, segura e pensada para potencializar seus resultados, como mais energia, equilíbrio hormonal, imunidade e recuperação. Nada é genérico: cada caso é avaliado com cuidado."
+  },
+  {
+    question: "Como lidar com a ansiedade e a relação emocional com a comida?",
+    answer:
+      "Compreender que comer envolve emoções é o primeiro passo. No nosso trabalho, usamos uma abordagem acolhedora que ajuda você a identificar padrões emocionais e desenvolver estratégias sem culpa ou restrições. Aplicamos técnicas como mindful eating, fortalecimento da autoestima e autocuidado para criar uma relação mais leve, consciente e sustentável com a comida."
+  },
+  {
+    question: "O que é o projeto Mulher360?",
+    answer:
+      "É uma jornada de cuidado completo da mulher, que une nutrição personalizada, movimento, autoconhecimento e fortalecimento da autoestima. O foco está no equilíbrio entre corpo, mente e emoções, promovendo mais energia, confiança e bem-estar. O projeto é um convite para transformar hábitos com leveza, autocuidado e alinhamento com seus valores."
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <main id="top" class="overflow-x-clip">
+    <SiteHeader
+      navigation={navigation}
+      ctaLabel="Agendar consulta"
+      ctaHref="https://wa.me/5512988942652"
+    />
+
+    <section class="relative isolate pb-10 pt-24 sm:pb-12 sm:pt-28">
+      <div class="floating-orb -left-12 top-12 h-32 w-32 bg-[#f2cc95]"></div>
+      <div class="floating-orb right-0 top-28 h-40 w-40 bg-[#e8b17a]"></div>
+
+      <div class="section-shell">
+        <div class="flex min-h-[78svh] items-center pb-8 pt-8 sm:min-h-[82svh] lg:min-h-[88svh] lg:pb-14 lg:pt-16">
+          <div class="fade-rise max-w-4xl">
+            <span class="eyebrow">Mulher 360™</span>
+            <h1 class="mt-5 text-[2.5rem] font-semibold leading-[0.92] sm:mt-6 sm:text-6xl lg:text-[4.7rem]">
+              Revitalize seu corpo e mente através do <span class="text-[color:var(--primary-strong)]">cuidado nutricional integrativo</span>
+            </h1>
+            <p class="mt-5 max-w-2xl text-[0.95rem] leading-7 text-[color:var(--muted)] sm:mt-6 sm:text-lg">
+              Transforme sua relação com a alimentação e consigo mesma através de uma abordagem holística que une nutrição, terapia e autocuidado.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a class="cta-main hero-cta-primary" href="https://wa.me/5512988942652">Agendar consulta</a>
+              <a class="cta-secondary hero-cta-secondary" href="https://www.instagram.com/mulher360_/">Siga no Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <article class="section-card rounded-[2.25rem] p-6 sm:p-8 lg:p-10">
+          <div class="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+            <div>
+              <div class="overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(255,244,236,0.96)_100%)] p-3">
+                <img
+                  src="/images/autora.png"
+                  alt="Dra. Luciana Teixeira"
+                  class="h-full min-h-[20rem] w-full rounded-[1.55rem] object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            <div>
+              <span class="eyebrow">Sobre a Nutricionista</span>
+              <h2 class="mt-5 max-w-3xl text-[1.8rem] font-semibold sm:text-4xl">
+                Um cuidado integrativo pensado para a transformação real da mulher.
+              </h2>
+              <p class="mt-5 text-base leading-7 text-[color:var(--muted)]">
+                Sou a Dra. Luciana Teixeira, nutricionista com foco no cuidado integral da mulher. Minha abordagem une ciência, empatia e propósito, considerando corpo, mente e espírito como um todo. Sou pós-graduanda em Neurociência e também estudante de Educação Física e Fonoaudiologia.
+              </p>
+              <p class="mt-5 text-base leading-7 text-[color:var(--muted)]">
+                Idealizei o projeto Mulher 360 para ajudar mulheres a restaurarem a autoestima, reconectarem-se com sua essência e desenvolverem uma relação mais consciente com a alimentação.
+              </p>
+              <p class="mt-5 text-base leading-7 text-[color:var(--muted)]">
+                Acredito que autoconhecimento, nutrição e equilíbrio emocional são a base para uma vida plena. Seja bem-vinda ao seu processo de transformação.
+              </p>
+            </div>
+
+            <div class="grid gap-4 lg:col-span-2 xl:grid-cols-[1.05fr_0.95fr]">
+              <div class="rounded-[1.6rem] border border-[color:var(--line)] bg-white/62 p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--primary-strong)]">
+                  Áreas de Atuação
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                  {specialties.map((item) => (
+                    <span class="inline-flex rounded-full border border-[rgba(143,63,22,0.12)] bg-white/72 px-4 py-2 text-sm font-medium text-[color:var(--text)]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div class="rounded-[1.6rem] border border-[rgba(143,63,22,0.08)] bg-[linear-gradient(135deg,rgba(47,31,26,0.96)_0%,rgba(90,42,18,0.94)_55%,rgba(187,91,39,0.94)_100%)] p-5 text-white">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/72">
+                  Método Mulher 360
+                </p>
+                <p class="mt-4 text-base leading-7 text-white/82">
+                  Uma visão que integra alimentação, autoestima, rotina, emoções e autocuidado para promover mudanças duradouras.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <span class="eyebrow">Como Funciona</span>
+            <h2 class="mt-5 max-w-3xl text-[1.8rem] font-semibold sm:text-4xl">
+              Um processo cuidadoso e personalizado que respeita seu ritmo e promove transformações duradouras.
+            </h2>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
+          <div class="grid gap-5 sm:grid-cols-2">
+            {steps.map((step) => (
+              <article class="section-card rounded-[1.75rem] p-5 sm:p-6">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[rgba(187,91,39,0.12)] text-sm font-semibold text-[color:var(--primary-strong)]">
+                    {step.number}
+                  </span>
+                  <h3 class="text-[1.25rem] font-semibold sm:text-[1.45rem]">{step.title}</h3>
+                </div>
+                <p class="mt-4 text-base leading-7 text-[color:var(--muted)]">{step.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <aside class="rounded-[2rem] border border-[color:var(--line)] bg-[linear-gradient(135deg,#2f1f1a_0%,#5a2a12_55%,#bb5b27_100%)] p-6 text-white shadow-[0_36px_80px_rgba(96,54,34,0.2)] sm:p-8">
+            <span class="eyebrow border-white/20 bg-white/10 text-white">Abordagem Integrativa</span>
+            <p class="mt-5 text-base leading-7 text-white/82">
+              Nossas consultas integram aspectos nutricionais e emocionais, trabalhando não apenas o que você come, mas também como você se relaciona com a comida. O foco está na transformação a longo prazo, não em dietas restritivas ou soluções temporárias.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <div class="text-center">
+          <span class="eyebrow">Depoimentos</span>
+          <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">Histórias de Transformação</h2>
+          <p class="mx-auto mt-5 max-w-3xl text-base leading-7 text-[color:var(--muted)]">
+            Conheça algumas das mulheres que transformaram suas vidas através do cuidado nutricional integrativo.
+          </p>
+        </div>
+
+        <div class="testimonial-carousel mt-8">
+          <button
+            class="testimonial-nav testimonial-nav-prev inline-flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(143,63,22,0.12)] bg-white/72 text-[color:var(--primary-strong)] transition hover:bg-white"
+            type="button"
+            data-carousel-prev
+            aria-label="Depoimento anterior"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M12.5 4.5L7 10L12.5 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+
+          <div
+            class="testimonial-track flex gap-5 overflow-x-auto"
+            data-testimonial-track
+          >
+            {testimonials.map((item) => (
+              <article class="testimonial-card testimonial-slide min-w-0 shrink-0 rounded-[1.75rem] p-5 sm:p-6">
+                <p class="testimonial-copy text-base leading-7 text-[color:var(--muted)]">{item.content}</p>
+                <div class="mt-6 flex items-center gap-3 border-t border-[color:var(--line)] pt-4">
+                  <img class="testimonial-avatar" src={item.avatar} alt={`Foto de ${item.name}`} loading="lazy" />
+                  <div>
+                    <p class="text-lg font-semibold">{item.name}</p>
+                    <p class="text-sm text-[color:var(--muted)]">{item.age} anos</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <button
+            class="testimonial-nav testimonial-nav-next inline-flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(143,63,22,0.12)] bg-white/72 text-[color:var(--primary-strong)] transition hover:bg-white"
+            type="button"
+            data-carousel-next
+            aria-label="Próximo depoimento"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M7.5 4.5L13 10L7.5 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mt-10 text-center">
+          <p class="text-base leading-7 text-[color:var(--muted)]">
+            Você também pode ser a próxima história de sucesso.
+          </p>
+          <div class="mt-6">
+            <a class="cta-main" href="https://wa.me/5512988942652">Agendar consulta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodologia" class="scroll-mt-28 pb-16 sm:scroll-mt-32 sm:pb-20">
+      <div class="section-shell">
+        <div class="section-card rounded-[2.25rem] p-6 sm:p-10">
+          <div class="text-center">
+            <span class="eyebrow">Abordagem</span>
+            <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">
+              Uma abordagem única que combina ciência nutricional com cuidado emocional para resultados duradouros.
+            </h2>
+          </div>
+
+          <div class="mt-8 grid gap-5 md:grid-cols-3">
+            {methodology.map((item) => (
+              <article class="rounded-[1.75rem] border border-[color:var(--line)] bg-white/62 p-5 sm:p-6">
+                <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(187,91,39,0.12)]">
+                  <div class="h-6 w-6 rounded-full bg-[color:var(--primary-strong)]"></div>
+                </div>
+                <h3 class="mt-5 text-[1.4rem] font-semibold sm:text-[1.55rem]">{item.title}</h3>
+                <p class="mt-4 text-base leading-7 text-[color:var(--muted)]">{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div class="mt-8 rounded-[1.8rem] border border-[rgba(143,63,22,0.08)] bg-[linear-gradient(135deg,rgba(47,31,26,0.96)_0%,rgba(90,42,18,0.94)_55%,rgba(187,91,39,0.94)_100%)] p-6 text-white sm:p-8">
+            <h3 class="text-[1.5rem] font-semibold sm:text-3xl">Transformação, não restrição</h3>
+            <p class="mt-4 text-base leading-7 text-white/82">
+              Acreditamos que a verdadeira mudança acontece quando você desenvolve uma relação amorosa e consciente com seu corpo e sua alimentação. Nosso foco está na transformação a longo prazo, não em dietas restritivas ou promessas de resultados rápidos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ebooks" class="scroll-mt-28 pb-20 sm:scroll-mt-32 sm:pb-24">
+      <div class="section-shell">
+        <div class="section-card overflow-hidden rounded-[2.25rem] p-6 sm:p-10">
+          <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
+              <span class="eyebrow">Guias</span>
+              <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">
+                Protocolos práticos para aprofundar o cuidado no seu ritmo.
+              </h2>
+              <p class="mt-5 max-w-2xl text-base leading-7 text-[color:var(--muted)]">
+                Além do acompanhamento clínico, a Mulher 360 também reúne ebooks com orientações objetivas, materiais aplicáveis no dia a dia e conteúdos pensados para fases e necessidades específicas da saúde da mulher.
+              </p>
+
+              <div class="mt-8">
+                <a class="cta-main" href="/ebooks">Ver catálogo</a>
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <article class="rounded-[1.75rem] border border-[color:var(--line)] bg-white/62 p-5 sm:p-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--primary-strong)]">Conteúdo aplicado</p>
+                <p class="mt-4 text-base leading-7 text-[color:var(--muted)]">
+                  Materiais diretos ao ponto, desenhados para sair da teoria e virar rotina.
+                </p>
+              </article>
+
+              <article class="rounded-[1.75rem] border border-[color:var(--line)] bg-white/62 p-5 sm:p-6">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--primary-strong)]">Temas específicos</p>
+                <p class="mt-4 text-base leading-7 text-[color:var(--muted)]">
+                  Protocolos voltados a objetivos concretos, com linguagem acessível e prática.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="scroll-mt-28 pb-20 sm:scroll-mt-32 sm:pb-24">
+      <div class="section-shell">
+        <div class="grid gap-6 lg:grid-cols-[0.78fr_1.22fr]">
+          <div>
+            <span class="eyebrow">Dúvidas</span>
+            <h2 class="mt-5 text-[1.8rem] font-semibold sm:text-4xl">Perguntas Frequentes</h2>
+            <p class="mt-5 text-base leading-7 text-[color:var(--muted)]">
+              Esclarecemos as dúvidas mais comuns sobre o nosso atendimento.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {faqs.map((item, index) => (
+              <div class="faq-item section-card cursor-pointer rounded-[1.5rem] p-5 sm:p-6" data-open="false">
+                <button
+                  class="faq-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls={`faq-panel-home-${index}`}
+                >
+                  <span class="pr-2 text-lg font-semibold">{item.question}</span>
+                  <svg
+                    class="faq-chevron h-5 w-5 text-[color:var(--primary-strong)]"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 7.5L10 12.5L15 7.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div
+                  id={`faq-panel-home-${index}`}
+                  class="faq-panel"
+                  role="region"
+                  aria-hidden="true"
+                >
+                  <p class="text-base leading-7 text-[color:var(--muted)]">{item.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-10 text-center">
+          <p class="text-base leading-7 text-[color:var(--muted)]">Ainda tem dúvidas? Estamos aqui para ajudar!</p>
+          <div class="mt-6">
+            <a class="cta-main" href="https://wa.me/5512988942652">Fale conosco</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SiteFooter links={footerLinks} />
+  </main>
+
+  <script is:inline>
+    const testimonialTrack = document.querySelector("[data-testimonial-track]");
+    const testimonialPrev = document.querySelector("[data-carousel-prev]");
+    const testimonialNext = document.querySelector("[data-carousel-next]");
+
+    if (
+      testimonialTrack instanceof HTMLElement &&
+      testimonialPrev instanceof HTMLButtonElement &&
+      testimonialNext instanceof HTMLButtonElement
+    ) {
+      const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let autoRotateId = 0;
+
+      const getStep = () => {
+        const slide = testimonialTrack.querySelector(".testimonial-slide");
+        if (!(slide instanceof HTMLElement)) return testimonialTrack.clientWidth;
+        const styles = window.getComputedStyle(testimonialTrack);
+        const gap = Number.parseFloat(styles.columnGap || styles.gap || "0");
+        return slide.getBoundingClientRect().width + gap;
+      };
+
+      const scrollTestimonials = (direction) => {
+        const step = getStep();
+        const maxScrollLeft = testimonialTrack.scrollWidth - testimonialTrack.clientWidth;
+        const threshold = 8;
+
+        if (direction > 0 && testimonialTrack.scrollLeft >= maxScrollLeft - threshold) {
+          testimonialTrack.scrollTo({ left: 0, behavior: "smooth" });
+          return;
+        }
+
+        if (direction < 0 && testimonialTrack.scrollLeft <= threshold) {
+          testimonialTrack.scrollTo({ left: Math.max(maxScrollLeft, 0), behavior: "smooth" });
+          return;
+        }
+
+        testimonialTrack.scrollBy({ left: step * direction, behavior: "smooth" });
+      };
+
+      const stopAutoRotate = () => {
+        if (autoRotateId) {
+          window.clearInterval(autoRotateId);
+          autoRotateId = 0;
+        }
+      };
+
+      const startAutoRotate = () => {
+        stopAutoRotate();
+        if (reduceMotionQuery.matches) return;
+
+        autoRotateId = window.setInterval(() => {
+          scrollTestimonials(1);
+        }, 5000);
+      };
+
+      testimonialPrev.addEventListener("click", () => {
+        scrollTestimonials(-1);
+        startAutoRotate();
+      });
+
+      testimonialNext.addEventListener("click", () => {
+        scrollTestimonials(1);
+        startAutoRotate();
+      });
+
+      testimonialTrack.addEventListener("mouseenter", stopAutoRotate);
+      testimonialTrack.addEventListener("mouseleave", startAutoRotate);
+      testimonialTrack.addEventListener("focusin", stopAutoRotate);
+      testimonialTrack.addEventListener("focusout", startAutoRotate);
+      testimonialTrack.addEventListener("touchstart", stopAutoRotate, { passive: true });
+      testimonialTrack.addEventListener("touchend", startAutoRotate);
+
+      if (typeof reduceMotionQuery.addEventListener === "function") {
+        reduceMotionQuery.addEventListener("change", startAutoRotate);
+      } else if (typeof reduceMotionQuery.addListener === "function") {
+        reduceMotionQuery.addListener(startAutoRotate);
+      }
+
+      startAutoRotate();
+    }
+
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const trigger = item.querySelector(".faq-trigger");
+      const panel = item.querySelector(".faq-panel");
+
+      if (!(trigger instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) return;
+
+      const setOpen = (open) => {
+        item.dataset.open = String(open);
+        trigger.setAttribute("aria-expanded", String(open));
+        panel.setAttribute("aria-hidden", String(!open));
+
+        if (open) {
+          panel.style.height = `${panel.scrollHeight}px`;
+        } else {
+          panel.style.height = `${panel.scrollHeight}px`;
+          requestAnimationFrame(() => {
+            panel.style.height = "0px";
+          });
+        }
+      };
+
+      item.addEventListener("click", () => {
+        const isOpen = item.dataset.open === "true";
+
+        faqItems.forEach((otherItem) => {
+          if (!(otherItem instanceof HTMLElement) || otherItem === item) return;
+          const otherTrigger = otherItem.querySelector(".faq-trigger");
+          const otherPanel = otherItem.querySelector(".faq-panel");
+
+          if (!(otherTrigger instanceof HTMLButtonElement) || !(otherPanel instanceof HTMLElement)) return;
+
+          otherItem.dataset.open = "false";
+          otherTrigger.setAttribute("aria-expanded", "false");
+          otherPanel.setAttribute("aria-hidden", "true");
+          otherPanel.style.height = "0px";
+        });
+
+        setOpen(!isOpen);
+      });
+
+      panel.addEventListener("transitionend", (event) => {
+        if (event.propertyName !== "height") return;
+        if (item.dataset.open === "true") {
+          panel.style.height = "auto";
+        }
+      });
+    });
+  </script>
+</BaseLayout>
