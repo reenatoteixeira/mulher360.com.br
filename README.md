@@ -59,7 +59,7 @@ public/
 
 ## Data Source
 
-Ebooks are defined in [src/data/ebooks.ts](/home/henna/workspace/repos/ebooks.mulher360/src/data/ebooks.ts).
+Ebooks are defined in [src/data/ebooks.ts](src/data/ebooks.ts).
 
 Each item includes:
 
@@ -76,13 +76,13 @@ When a new ebook is added correctly to this file, its corresponding dynamic rout
 
 ## Shared Components
 
-- [src/layouts/BaseLayout.astro](/home/henna/workspace/repos/ebooks.mulher360/src/layouts/BaseLayout.astro)
+- [src/layouts/BaseLayout.astro](src/layouts/BaseLayout.astro)
   Base HTML structure, metadata, canonical URL, Open Graph tags, and global integrations.
-- [src/components/SiteHeader.astro](/home/henna/workspace/repos/ebooks.mulher360/src/components/SiteHeader.astro)
+- [src/components/SiteHeader.astro](src/components/SiteHeader.astro)
   Shared header with the main navigation.
-- [src/components/SiteFooter.astro](/home/henna/workspace/repos/ebooks.mulher360/src/components/SiteFooter.astro)
+- [src/components/SiteFooter.astro](src/components/SiteFooter.astro)
   Shared footer used across pages.
-- [src/components/EbookLandingPage.astro](/home/henna/workspace/repos/ebooks.mulher360/src/components/EbookLandingPage.astro)
+- [src/components/EbookLandingPage.astro](src/components/EbookLandingPage.astro)
   Reusable template for individual ebook pages.
 
 ## Running Locally
@@ -120,11 +120,11 @@ The project uses:
 - automatic sitemap generation
 - basic metadata for SEO and social sharing
 
-Main configuration lives in [astro.config.mjs](/home/henna/workspace/repos/ebooks.mulher360/astro.config.mjs).
+Main configuration lives in [astro.config.mjs](astro.config.mjs).
 
 ## Institutional Content
 
-The main homepage content currently lives in [src/pages/index.astro](/home/henna/workspace/repos/ebooks.mulher360/src/pages/index.astro). This works well for the current project size, but if content grows significantly, moving text blocks into dedicated data files or components may be a good next step.
+The main homepage content currently lives in [src/pages/index.astro](src/pages/index.astro). This works well for the current project size, but if content grows significantly, moving text blocks into dedicated data files or components may be a good next step.
 
 ## Deployment
 
