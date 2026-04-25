@@ -63,14 +63,14 @@ const footerLinks = [
         <div id="catalog-grid" class="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {ebooks.map((ebook) => (
             <article
-              class="section-card rounded-[1.9rem] p-4 sm:p-5"
+              class="section-card flex h-full rounded-[1.9rem] p-4 sm:p-5"
               data-ebook-card
               data-search={ebook.searchTerms.join(" ")}
             >
-              <div class="grid gap-5">
+              <div class="grid h-full w-full grid-rows-[1fr_auto] gap-5">
                 <div class="overflow-hidden rounded-[1.55rem] border border-[color:var(--line)] bg-[rgba(255,255,255,0.34)] p-3">
-                  <div class="relative w-full rounded-[1.55rem] border border-[color:var(--line)] bg-[#1f1512] p-3 shadow-[0_26px_52px_rgba(72,37,20,0.22)]">
-                    <div class="rounded-[1.2rem] border border-white/10 bg-[linear-gradient(180deg,#18110f_0%,#30211c_38%,#bb5b27_100%)] px-5 py-6 text-white sm:px-6 sm:py-7">
+                  <div class="relative flex h-full w-full rounded-[1.55rem] border border-[color:var(--line)] bg-[#1f1512] p-3 shadow-[0_26px_52px_rgba(72,37,20,0.22)]">
+                    <div class="flex h-full w-full flex-col rounded-[1.2rem] border border-white/10 bg-[linear-gradient(180deg,#18110f_0%,#30211c_38%,#bb5b27_100%)] px-5 py-6 text-white sm:px-6 sm:py-7">
                       <p class="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#f7d3ab]">{ebook.cover.brand}</p>
                       <h3 class="mt-6 font-display text-[2.15rem] font-semibold leading-none sm:text-[2.45rem]">
                         {ebook.cover.titleLine1}
@@ -78,20 +78,20 @@ const footerLinks = [
                       <h3 class="mt-1 font-display text-[2.15rem] font-semibold leading-none sm:text-[2.45rem]">
                         {ebook.cover.titleLine2}
                       </h3>
-                      <p class="mt-4 text-sm leading-6 text-white/80">
+                      <p class="mt-4 flex-1 text-sm leading-6 text-white/80">
                         {ebook.cover.subtitle}
                       </p>
                     </div>
                   </div>
                 </div>
 
-              <div class="px-1 pb-1">
-                <div class="flex flex-col items-start gap-1 border-t border-[color:var(--line)] pt-4">
-                  <span class="text-sm font-medium text-[color:var(--muted)] line-through sm:text-base">R${ebook.priceFrom}</span>
-                  <span class="font-display text-[2.9rem] font-semibold leading-none text-[color:var(--primary-strong)] sm:text-[3.2rem]">R$ {ebook.priceTo}</span>
-                </div>
-                <div class="mt-5 flex flex-col gap-2.5">
-                  <a class="cta-main offer-cta-primary" href={ebook.checkoutUrl}>Comprar agora</a>
+                <div class="px-1 pb-1">
+                  <div class="flex flex-col items-start gap-1 border-t border-[color:var(--line)] pt-4">
+                    <span class="text-sm font-medium text-[color:var(--muted)] line-through sm:text-base">R${ebook.priceFrom}</span>
+                    <span class="font-display text-[2.9rem] font-semibold leading-none text-[color:var(--primary-strong)] sm:text-[3.2rem]">R$ {ebook.priceTo}</span>
+                  </div>
+                  <div class="mt-5 flex flex-col gap-2.5">
+                    <a class="cta-main offer-cta-primary" href={ebook.checkoutUrl}>Comprar agora</a>
                     <a class="cta-secondary" href={`/ebooks/${ebook.slug}`}>Ver detalhes</a>
                   </div>
                 </div>

@@ -74,7 +74,7 @@ export const ebooks: EbookData[] = [
     description:
       "Descubra como usar a hidratação de forma estratégica para reduzir fome, retenção e inchaço com um protocolo simples, direto e aplicável à rotina.",
     checkoutUrl: "https://pay.hotmart.com/I105279156Y",
-    priceFrom: "97,00",
+    priceFrom: "67,00",
     priceTo: "27,00",
     catalogDescription:
       "Ebook sobre hidratação estratégica para ajudar o corpo a desinchar, regular sinais e apoiar o emagrecimento com aplicação prática no dia a dia.",
@@ -195,7 +195,7 @@ export const ebooks: EbookData[] = [
       "Um guia prático para escolher doces com mais consciência, equilíbrio e autonomia, entendendo quais opções cabem melhor na rotina e quais devem ficar para momentos ocasionais.",
     checkoutUrl: "https://pay.hotmart.com/O105538410S",
     priceFrom: "97,00",
-    priceTo: "27,00",
+    priceTo: "47,00",
     catalogDescription:
       "Guia prático para entender a escala do doce, diferenciar melhores escolhas, boas opções e doces ocasionais, além de aprender o melhor momento para consumir.",
     searchTerms: [
@@ -221,9 +221,9 @@ export const ebooks: EbookData[] = [
       eyebrow: "Ebook digital",
       title: "Aprenda a escolher doces com mais consciência, equilíbrio e menos culpa.",
       description:
-        "Um guia prático para entender quais doces podem aparecer com mais frequência, quais pedem moderação e quais devem ficar para momentos ocasionais, sem restrições extremas e sem a sensação de perder o controle.",
+        "Um guia pensado para quem quer parar de viver entre o 8 ou 80 com o doce e começar a fazer escolhas mais tranquilas, sem neura, sem proibição e sem depender de força de vontade o tempo todo.",
       primaryCta: "Quero acessar o guia",
-      secondaryCta: "Ver a escala do doce"
+      secondaryCta: "Ver como o guia funciona"
     },
     problem: {
       title: "A relação com o doce pode virar um ciclo de culpa, excesso e perda de controle.",
@@ -231,14 +231,14 @@ export const ebooks: EbookData[] = [
         "O guia parte de uma dificuldade comum: querer consumir doces, mas não saber diferenciar melhores escolhas das opções que devem aparecer com menos frequência. Sem clareza, o doce pode ser vivido como proibição ou exagero, em vez de uma escolha consciente dentro da rotina."
     },
     solution: {
-      title: "Organizar os doces em uma escala simples: do melhor ao mais ocasional.",
+      title: "Um jeito mais leve de entender onde o doce entra na sua rotina.",
       description:
-        "A Escala do Doce apresenta níveis de escolha para o dia a dia, consumo moderado, consumo ocasional e opções mais críticas. O material também orienta o melhor momento para consumir: preferencialmente após refeições principais, e não de forma isolada."
+        "A Escala do Doce organiza a decisão de um jeito simples e prático, para que você saiba avaliar melhor o contexto, a frequência e o impacto das suas escolhas sem transformar o doce em vilão nem em descontrole."
     },
     benefits: [
       {
         title: "Mais consciência nas escolhas",
-        text: "Você aprende a diferenciar opções mais nutritivas, boas opções com açúcar, doces ocasionais e escolhas mais críticas para deixar para momentos específicos."
+        text: "Você passa a olhar para o doce com mais critério e menos impulso, entendendo melhor o que faz sentido para a rotina e o que vale deixar para exceções."
       },
       {
         title: "Menos culpa e menos extremos",
@@ -246,22 +246,22 @@ export const ebooks: EbookData[] = [
       },
       {
         title: "Melhor momento para consumir",
-        text: "O material explica por que, sempre que possível, o doce deve ser consumido após refeições, quando proteína, fibras e gordura tornam a digestão mais lenta."
+        text: "O material mostra um raciocínio simples que ajuda você a encaixar o doce de forma mais estratégica, em vez de consumir no automático."
       },
       {
         title: "Mais controle da fome",
-        text: "Ao evitar o consumo de doce em jejum ou isolado, o guia busca reduzir picos rápidos de glicose, que podem gerar mais fome, cansaço e vontade de comer novamente."
+        text: "Com escolhas mais bem posicionadas, a tendência é reduzir aquele efeito de vontade que volta rápido e faz parecer que nunca é suficiente."
       }
     ],
     contentSection: {
-      title: "O que você vai encontrar no material.",
+      title: "O que esse material te ajuda a perceber.",
       description:
-        "O ebook organiza os doces em níveis claros para facilitar decisões mais leves e saudáveis no dia a dia.",
+        "Sem entregar uma lista solta de certo e errado, o ebook mostra uma lógica simples para você decidir melhor sem depender de regra decorada.",
       points: [
-        "Nível 1: melhores escolhas para uso mais frequente, como frutas in natura, fruta com iogurte natural, banana com canela ou cacau, iogurte natural com fruta e abacate com cacau",
-        "Nível 2: boas opções para consumo moderado, como chocolate 70% cacau ou mais, mel em pequenas quantidades, doces caseiros simples e barras proteicas de boas marcas",
-        "Níveis 3 e 4: doces ocasionais e escolhas mais críticas, como chocolate ao leite, bolos simples, sobremesas caseiras, doces industrializados, recheados, fast food doce, sorvetes industrializados e combinações com muito açúcar e gordura",
-        "Regras de ouro para consumir doce com mais consciência: preferir após refeições, observar quantidade e entender que frequência é o que mais impacta o resultado"
+        "Uma forma simples de classificar melhor suas escolhas sem cair no pensamento de tudo ou nada",
+        "Critérios práticos para entender quando algo cabe mais na rotina e quando vale tratar como exceção",
+        "Orientações para não decidir no impulso e passar a consumir doce com mais consciência",
+        "Um raciocínio fácil de aplicar no dia a dia para ter mais equilíbrio sem sensação de privação"
       ]
     },
     author: {
@@ -279,15 +279,15 @@ export const ebooks: EbookData[] = [
       primaryCta: "Quero garantir meu acesso",
       secondaryCta: "Ver perguntas frequentes",
       deliverables: [
-        "Guia Escala do Doce - Do melhor ao mais ocasional, em formato digital.",
-        "Classificação prática dos doces em níveis: melhores escolhas, boas opções, ocasionais e mais críticos.",
-        "Regras de ouro para escolher melhor o momento, a quantidade e a frequência do consumo."
+        "Guia Escala do Doce, em formato digital.",
+        "Método prático para analisar melhor suas escolhas sem depender de proibição ou culpa.",
+        "Direcionamentos simples para consumir com mais consciência, equilíbrio e autonomia."
       ]
     },
     finalCta: {
       title: "Você não precisa parar de comer doce, só precisa saber em qual lugar ele entra na sua rotina.",
       description:
-        "Se a sua dificuldade é equilibrar vontade, escolhas e frequência, este guia entrega uma escala simples para decidir com mais consciência e menos culpa.",
+        "Se hoje o doce parece bagunçar sua rotina ou despertar culpa, esse guia pode te mostrar uma forma mais leve e inteligente de lidar com isso.",
       primaryCta: "Quero acessar o ebook"
     },
     faqs: [
@@ -299,22 +299,22 @@ export const ebooks: EbookData[] = [
       {
         question: "O guia proíbe algum tipo de doce?",
         answer:
-          "Não. O conteúdo organiza os doces por frequência e impacto, indicando melhores escolhas para a rotina e opções mais críticas para consumo consciente e sem frequência."
+          "Não. A proposta é trazer clareza para suas decisões, não montar uma lista de alimentos proibidos."
       },
       {
         question: "Qual é o melhor momento para comer doce?",
         answer:
-          "Segundo o guia, sempre que possível, o doce deve ser consumido após refeições, porque proteína, fibras e gordura tornam a digestão mais lenta e o açúcar tende a ser absorvido de forma mais gradual."
+          "O guia aborda esse ponto de forma prática, explicando como o contexto do consumo pode fazer diferença na sua rotina e na sua percepção de controle."
       },
       {
         question: "Quais doces aparecem como melhores escolhas?",
         answer:
-          "O Nível 1 inclui frutas in natura, fruta com iogurte natural, banana com canela ou cacau, iogurte natural com fruta e abacate com cacau."
+          "O material não se resume a citar opções. Ele ensina o raciocínio por trás das escolhas para que você saiba avaliar melhor diferentes situações."
       },
       {
         question: "O que mais impacta o resultado?",
         answer:
-          "O guia resume que quantidade importa mais que proibição e que frequência é o que mais impacta o resultado."
+          "O ebook ajuda você a enxergar os fatores que mais pesam nas escolhas do dia a dia, para sair do impulso e agir com mais consciência."
       }
     ]
   },
@@ -326,7 +326,7 @@ export const ebooks: EbookData[] = [
       "Um guia prático para fazer trocas inteligentes dentro dos grupos alimentares, mantendo equilíbrio nutricional, praticidade e prazer em comer sem depender de rigidez.",
     checkoutUrl: "https://pay.hotmart.com/X105541967B",
     priceFrom: "97,00",
-    priceTo: "27,00",
+    priceTo: "47,00",
     catalogDescription:
       "Guia prático de trocas alimentares para adaptar carboidratos, proteínas, gorduras, frutas, bebidas e refeições corridas com mais consciência e consistência.",
     searchTerms: [
@@ -353,9 +353,9 @@ export const ebooks: EbookData[] = [
       eyebrow: "Ebook digital",
       title: "Trocas inteligentes para transformar sua alimentação sem rigidez.",
       description:
-        "Um guia prático para aprender a substituir alimentos dentro dos principais grupos alimentares, mantendo equilíbrio nutricional sem abrir mão da praticidade, do prazer em comer e da vida real.",
+        "Um guia para quem quer comer melhor sem ficar presa a cardápio engessado, aprendendo a adaptar a alimentação com mais leveza, segurança e constância na vida real.",
       primaryCta: "Quero acessar o guia",
-      secondaryCta: "Ver as trocas do ebook"
+      secondaryCta: "Ver como o guia ajuda"
     },
     problem: {
       title: "Manter uma alimentação equilibrada nem sempre é simples na rotina real.",
@@ -365,7 +365,7 @@ export const ebooks: EbookData[] = [
     solution: {
       title: "Usar trocas inteligentes para ter flexibilidade com direção.",
       description:
-        "O guia mostra como variar proteínas, carboidratos, gorduras boas, frutas, bebidas e refeições práticas sem perder o equilíbrio. A proposta não é restringir, mas facilitar escolhas conscientes e sustentáveis todos os dias."
+        "O guia apresenta uma lógica simples para você adaptar refeições, variar escolhas e manter uma alimentação mais equilibrada sem depender de rigidez, monotonia ou perfeição."
     },
     benefits: [
       {
@@ -374,11 +374,11 @@ export const ebooks: EbookData[] = [
       },
       {
         title: "Trocas simples por grupo alimentar",
-        text: "O guia organiza opções de proteínas, carboidratos, verduras, legumes, gorduras boas e frutas para facilitar substituições no dia a dia."
+        text: "O material facilita decisões do cotidiano com uma linha de raciocínio clara para substituir melhor sem se perder."
       },
       {
         title: "Praticidade para dias corridos",
-        text: "O material traz ideias de refeições simples para substituir uma refeição quando a rotina estiver corrida, como pão com ovo e salada, iogurte com fruta ou shake proteico com fruta."
+        text: "Mesmo quando a rotina aperta, você passa a ter mais repertório para ajustar refeições sem sentir que saiu totalmente do eixo."
       },
       {
         title: "Mais consistência, menos perfeição",
@@ -386,14 +386,14 @@ export const ebooks: EbookData[] = [
       }
     ],
     contentSection: {
-      title: "O que você vai encontrar no material.",
+      title: "O que esse guia destrava na prática.",
       description:
-        "O ebook organiza trocas alimentares de forma direta para ajudar você a adaptar a alimentação à rotina sem perder qualidade.",
+        "Em vez de te prender a combinações fixas, o ebook te ensina a fazer ajustes com mais autonomia e critério no dia a dia.",
       points: [
-        "Proteínas essenciais em todas as refeições, com opções como frango, carne, peixe, ovos, iogurte e whey, permitindo variar entre elas sem problema",
-        "Carboidratos como energia do corpo, com opções por refeição como pão francês, pão de forma, arroz, batata, tapioca e cuscuz, sem excluir totalmente esse grupo",
-        "Verduras e legumes liberados, gorduras boas em pequenas porções e frutas de 1 a 3 por dia, preferencialmente junto com refeições ou lanches",
-        "Orientações para café e bebidas, refeições práticas para dias corridos e regras de ouro: ter proteína na refeição, não pular refeições, não ficar longos períodos sem comer e buscar consistência"
+        "Uma forma simples de pensar substituições sem bagunçar o equilíbrio da alimentação",
+        "Critérios para variar refeições com mais autonomia, sem depender de cardápio fixo",
+        "Direcionamentos práticos para lidar melhor com rotina corrida e falta de tempo",
+        "Princípios fáceis de aplicar para sustentar boas escolhas com mais constância"
       ]
     },
     author: {
@@ -412,14 +412,14 @@ export const ebooks: EbookData[] = [
       secondaryCta: "Ver perguntas frequentes",
       deliverables: [
         "Guia de Trocas Inteligentes, em formato digital.",
-        "Listas práticas de substituições para proteínas, carboidratos, verduras, legumes, gorduras boas, frutas, bebidas e refeições rápidas.",
-        "Regras de ouro para manter equilíbrio sem rigidez e aplicar boas escolhas na vida real."
+        "Estrutura prática para adaptar refeições com mais liberdade e segurança.",
+        "Orientações simples para manter qualidade alimentar sem rigidez."
       ]
     },
     finalCta: {
       title: "Você não precisa seguir uma dieta rígida. Precisa aprender a fazer boas escolhas todos os dias.",
       description:
-        "Se você busca uma forma mais prática, simples e sustentável de adaptar sua alimentação, este guia entrega trocas claras para manter qualidade com mais consciência e consistência.",
+        "Se a sua dificuldade é saber como adaptar a alimentação sem se perder, esse guia te ajuda a construir mais segurança nas escolhas do dia a dia.",
       primaryCta: "Quero acessar o ebook"
     },
     faqs: [
@@ -431,7 +431,7 @@ export const ebooks: EbookData[] = [
       {
         question: "Quais grupos alimentares aparecem no guia?",
         answer:
-          "O ebook organiza trocas dentro de proteínas, carboidratos, verduras e legumes, gorduras boas, frutas, café e bebidas, além de refeições práticas para dias corridos."
+          "O material cobre os principais contextos da rotina alimentar para ajudar você a fazer substituições com mais confiança e menos dúvida."
       },
       {
         question: "Preciso excluir carboidratos?",
@@ -441,12 +441,12 @@ export const ebooks: EbookData[] = [
       {
         question: "O guia serve para dias corridos?",
         answer:
-          "Sim. O material inclui opções de refeições práticas para substituir uma refeição, como pão com ovo e salada, iogurte com fruta e shake proteico com fruta."
+          "Sim. A proposta do guia é justamente funcionar na vida real, inclusive quando você precisa de praticidade para não desorganizar tudo."
       },
       {
         question: "Qual é a principal regra do material?",
         answer:
-          "O guia resume que equilíbrio não é sobre perfeição, mas sobre consistência. Também reforça regras como ter proteína na refeição, não pular refeições e não ficar longos períodos sem comer."
+          "A principal ideia é sair da lógica da perfeição e construir consistência com escolhas mais conscientes, simples e sustentáveis."
       }
     ]
   }
