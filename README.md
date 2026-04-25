@@ -1,92 +1,91 @@
 # Mulher 360
 
-Static landing pages for the Mulher 360 brand, focused on:
+Static landing pages for the **Mulher 360** brand, created by nutritionist **Dr. Luciana Teixeira**. This project brings together the brand’s institutional presence, the ebook catalog, and individual landing pages for each digital product, with a strong focus on clarity, performance, and conversion.
 
-- the main institutional clinic page
+The site communicates the Mulher 360 method through an integrative approach centered on women’s health, connecting nutrition, self-care, emotional balance, and practical content for everyday life.
+
+## Overview
+
+This version of the project was built to centralize, in a single static codebase:
+
+- the main Mulher 360 landing page
 - the ebook catalog
 - individual landing pages for each ebook
+- a basic SEO and sharing structure
 
-The project is structured to deliver a fast, easy-to-maintain, conversion-oriented static website without relying on a backend.
-
-## Purpose
-
-This repository centralizes Mulher 360’s web presence in a single static frontend. The goal is to combine:
-
-- institutional presentation of the main service
-- navigation to digital materials
-- ebook sales pages with dedicated content
-- basic SEO and sitemap generation
+The goal is to keep the implementation easy to maintain, fast to load, and simple to deploy on any static hosting platform.
 
 ## Stack
 
 - Astro 5
 - Tailwind CSS 3
+- `@astrojs/tailwind`
 - `@astrojs/sitemap`
-- static output (`output: "static"`)
 
-## Structure
+## Project Structure
 
 ```text
 src/
-  components/
-    EbookLandingPage.astro
-    SiteFooter.astro
-    SiteHeader.astro
-  data/
-    ebooks.ts
-  layouts/
-    BaseLayout.astro
-  pages/
-    index.astro
-    ebooks/
-      index.astro
-      [slug].astro
-  styles/
-    global.css
+├── components/
+│   ├── EbookLandingPage.astro
+│   ├── SiteFooter.astro
+│   └── SiteHeader.astro
+├── data/
+│   └── ebooks.ts
+├── layouts/
+│   └── BaseLayout.astro
+├── pages/
+│   ├── index.astro
+│   └── ebooks/
+│       ├── index.astro
+│       └── [slug].astro
+└── styles/
+    └── global.css
 
 public/
-  avatars/
-  images/
-  favicon.svg
+├── avatars/
+├── images/
+└── favicon.svg
 ```
 
 ## Pages
 
 - `/`
-  Main Mulher 360 landing page.
+  Main institutional Mulher 360 landing page.
 - `/ebooks`
-  Catalog of available ebooks.
+  Catalog of available digital products.
 - `/ebooks/[slug]`
-  Individual ebook landing page, generated from `src/data/ebooks.ts`.
+  Individual ebook landing page, generated dynamically from `src/data/ebooks.ts`.
 
-## Data source
+## Data Source
 
-Ebooks are defined in `src/data/ebooks.ts`.
+Ebooks are defined in [src/data/ebooks.ts](/home/henna/workspace/repos/ebooks.mulher360/src/data/ebooks.ts).
 
-This file contains:
+Each item includes:
 
 - slug
-- metadata
+- SEO metadata
+- catalog description
 - pricing
-- checkout CTA
-- catalog content
-- individual landing page content
+- checkout URL
+- landing page content
+- offer blocks
 - product FAQ
 
-If a new ebook is added correctly to this file, the corresponding dynamic route will be generated automatically.
+When a new ebook is added correctly to this file, its corresponding dynamic route is automatically generated during the build.
 
-## Shared components
+## Shared Components
 
-- `BaseLayout.astro`
-  Handles the base HTML structure, meta tags, canonical URL, analytics, and the default social image.
-- `SiteHeader.astro`
-  Shared header with anchor navigation, scroll-based active state, and a compact mode for specific pages.
-- `SiteFooter.astro`
-  Shared footer used across the homepage, catalog, and landing pages.
-- `EbookLandingPage.astro`
-  Template for individual ebook pages.
+- [src/layouts/BaseLayout.astro](/home/henna/workspace/repos/ebooks.mulher360/src/layouts/BaseLayout.astro)
+  Base HTML structure, metadata, canonical URL, Open Graph tags, and global integrations.
+- [src/components/SiteHeader.astro](/home/henna/workspace/repos/ebooks.mulher360/src/components/SiteHeader.astro)
+  Shared header with the main navigation.
+- [src/components/SiteFooter.astro](/home/henna/workspace/repos/ebooks.mulher360/src/components/SiteFooter.astro)
+  Shared footer used across pages.
+- [src/components/EbookLandingPage.astro](/home/henna/workspace/repos/ebooks.mulher360/src/components/EbookLandingPage.astro)
+  Reusable template for individual ebook pages.
 
-## Commands
+## Running Locally
 
 Install dependencies:
 
@@ -94,75 +93,48 @@ Install dependencies:
 npm install
 ```
 
-Run in development:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Production build:
+Create a production build:
 
 ```bash
 npm run build
 ```
 
-Preview the build locally:
+Preview the production build locally:
 
 ```bash
 npm run preview
 ```
 
-## SEO and sharing
+## SEO and Static Generation
 
-The project already includes:
+The project uses:
 
-- `canonical`
-- `description`
-- basic Open Graph metadata
-- Twitter card metadata
-- sitemap generation during build
+- `site` configured as `https://mulher360.com.br`
+- static output with `output: "static"`
+- automatic sitemap generation
+- basic metadata for SEO and social sharing
 
-Important note:
+Main configuration lives in [astro.config.mjs](/home/henna/workspace/repos/ebooks.mulher360/astro.config.mjs).
 
-- the current social image uses a simple fallback defined in `BaseLayout.astro`
-- if an official share image becomes available, replacing that fallback with a dedicated asset is recommended
+## Institutional Content
 
-## Analytics
-
-The project loads Google Analytics through `gtag` in the base layout and also sends custom events on ebook pages, such as:
-
-- `page_view`
-- `scroll`
-- `cta_click`
-- `checkout_exit`
-
-## Accessibility and behavior
-
-- the header highlights the active section while scrolling
-- the testimonials carousel rotates automatically, but respects `prefers-reduced-motion`
-- `scroll-behavior: smooth` also respects reduced-motion preferences
-
-## Maintenance
-
-### Update checkout
-
-There is still a placeholder in `src/data/ebooks.ts` with an explicit comment:
-
-```ts
-// TODO: Update checkout link with the real URL.
-```
-
-Before publishing the ebook, replace `checkoutUrl` with the real checkout URL.
-
-### Update institutional content
-
-Most homepage content currently lives in `src/pages/index.astro`. This is acceptable for the current project size, but any meaningful expansion may justify moving content blocks into data files or additional components.
+The main homepage content currently lives in [src/pages/index.astro](/home/henna/workspace/repos/ebooks.mulher360/src/pages/index.astro). This works well for the current project size, but if content grows significantly, moving text blocks into dedicated data files or components may be a good next step.
 
 ## Deployment
 
-The project generates a static build, so it can be hosted on any platform that supports static sites, such as:
+Because the project generates a static build, it can be deployed to platforms such as:
 
 - Vercel
 - Netlify
 - Cloudflare Pages
-- traditional hosting by publishing the `dist/` directory
+- any server capable of hosting the `dist/` directory
+
+## Project Goal
+
+More than a single landing page, this repository acts as the web foundation for Mulher 360: it presents the brand’s positioning, reinforces Dr. Luciana Teixeira’s authorship, and provides a scalable structure for publishing digital products with dedicated sales pages.
