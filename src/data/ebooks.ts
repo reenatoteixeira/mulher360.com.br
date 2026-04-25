@@ -317,6 +317,138 @@ export const ebooks: EbookData[] = [
           "O guia resume que quantidade importa mais que proibição e que frequência é o que mais impacta o resultado."
       }
     ]
+  },
+  {
+    slug: "guia-de-trocas",
+    title: "Guia de Trocas Inteligentes",
+    metaTitle: "Mulher 360 | Guia de Trocas Inteligentes",
+    description:
+      "Um guia prático para fazer trocas inteligentes dentro dos grupos alimentares, mantendo equilíbrio nutricional, praticidade e prazer em comer sem depender de rigidez.",
+    checkoutUrl: "https://pay.hotmart.com/X105541967B",
+    priceFrom: "97,00",
+    priceTo: "27,00",
+    catalogDescription:
+      "Guia prático de trocas alimentares para adaptar carboidratos, proteínas, gorduras, frutas, bebidas e refeições corridas com mais consciência e consistência.",
+    searchTerms: [
+      "guia de trocas",
+      "trocas inteligentes",
+      "alimentacao equilibrada",
+      "carboidratos",
+      "proteinas",
+      "gorduras boas",
+      "refeicoes praticas",
+      "escolhas conscientes",
+      "mulher 360"
+    ],
+    cover: {
+      brand: "Mulher 360",
+      title: "Guia de Trocas Inteligentes",
+      titleLine1: "Guia de",
+      titleLine2: "Trocas",
+      subtitle: "Substituir e escolher o que te faz bem com praticidade, consciência e equilíbrio.",
+      signedByLabel: "Assinado por",
+      signedBy: "Dra. Luciana Teixeira"
+    },
+    hero: {
+      eyebrow: "Ebook digital",
+      title: "Trocas inteligentes para transformar sua alimentação sem rigidez.",
+      description:
+        "Um guia prático para aprender a substituir alimentos dentro dos principais grupos alimentares, mantendo equilíbrio nutricional sem abrir mão da praticidade, do prazer em comer e da vida real.",
+      primaryCta: "Quero acessar o guia",
+      secondaryCta: "Ver as trocas do ebook"
+    },
+    problem: {
+      title: "Manter uma alimentação equilibrada nem sempre é simples na rotina real.",
+      description:
+        "O material reconhece que o dia a dia pode dificultar a constância. Quando a alimentação depende de rigidez ou perfeição, fica mais difícil adaptar as refeições, variar os alimentos e manter qualidade sem culpa."
+    },
+    solution: {
+      title: "Usar trocas inteligentes para ter flexibilidade com direção.",
+      description:
+        "O guia mostra como variar proteínas, carboidratos, gorduras boas, frutas, bebidas e refeições práticas sem perder o equilíbrio. A proposta não é restringir, mas facilitar escolhas conscientes e sustentáveis todos os dias."
+    },
+    benefits: [
+      {
+        title: "Mais liberdade com direção",
+        text: "Você entende que não precisa comer sempre a mesma coisa, desde que mantenha equilíbrio entre os grupos alimentares."
+      },
+      {
+        title: "Trocas simples por grupo alimentar",
+        text: "O guia organiza opções de proteínas, carboidratos, verduras, legumes, gorduras boas e frutas para facilitar substituições no dia a dia."
+      },
+      {
+        title: "Praticidade para dias corridos",
+        text: "O material traz ideias de refeições simples para substituir uma refeição quando a rotina estiver corrida, como pão com ovo e salada, iogurte com fruta ou shake proteico com fruta."
+      },
+      {
+        title: "Mais consistência, menos perfeição",
+        text: "A mensagem central é que equilíbrio não é sobre perfeição, mas sobre consistência nas escolhas feitas todos os dias."
+      }
+    ],
+    contentSection: {
+      title: "O que você vai encontrar no material.",
+      description:
+        "O ebook organiza trocas alimentares de forma direta para ajudar você a adaptar a alimentação à rotina sem perder qualidade.",
+      points: [
+        "Proteínas essenciais em todas as refeições, com opções como frango, carne, peixe, ovos, iogurte e whey, permitindo variar entre elas sem problema",
+        "Carboidratos como energia do corpo, com opções por refeição como pão francês, pão de forma, arroz, batata, tapioca e cuscuz, sem excluir totalmente esse grupo",
+        "Verduras e legumes liberados, gorduras boas em pequenas porções e frutas de 1 a 3 por dia, preferencialmente junto com refeições ou lanches",
+        "Orientações para café e bebidas, refeições práticas para dias corridos e regras de ouro: ter proteína na refeição, não pular refeições, não ficar longos períodos sem comer e buscar consistência"
+      ]
+    },
+    author: {
+      name: "Dra. Luciana Teixeira",
+      roleDescription:
+        "Nutricionista com foco no cuidado integral da mulher, unindo ciência, empatia e propósito em uma abordagem que considera corpo, mente e espírito.",
+      bio:
+        "Pós-graduanda em Neurociência e estudante de Educação Física e Fonoaudiologia, desenvolveu o projeto Mulher 360 para ajudar mulheres a resgatarem a autoestima, reconectarem-se com sua essência e construírem uma relação mais consciente com a alimentação.",
+      imageSrc: "/images/autora.png",
+      imageAlt: "Dra. Luciana Teixeira"
+    },
+    offer: {
+      title: "Um guia para substituir melhor, variar com segurança e manter constância.",
+      description: "Pagamento em até 3x e garantia incondicional de 7 dias.",
+      primaryCta: "Quero garantir meu acesso",
+      secondaryCta: "Ver perguntas frequentes",
+      deliverables: [
+        "Guia de Trocas Inteligentes, em formato digital.",
+        "Listas práticas de substituições para proteínas, carboidratos, verduras, legumes, gorduras boas, frutas, bebidas e refeições rápidas.",
+        "Regras de ouro para manter equilíbrio sem rigidez e aplicar boas escolhas na vida real."
+      ]
+    },
+    finalCta: {
+      title: "Você não precisa seguir uma dieta rígida. Precisa aprender a fazer boas escolhas todos os dias.",
+      description:
+        "Se você busca uma forma mais prática, simples e sustentável de adaptar sua alimentação, este guia entrega trocas claras para manter qualidade com mais consciência e consistência.",
+      primaryCta: "Quero acessar o ebook"
+    },
+    faqs: [
+      {
+        question: "Esse guia é uma dieta rígida?",
+        answer:
+          "Não. O próprio material reforça que você não precisa de rigidez, e sim de estratégia. A proposta é dar flexibilidade com direção para adaptar a alimentação à rotina."
+      },
+      {
+        question: "Quais grupos alimentares aparecem no guia?",
+        answer:
+          "O ebook organiza trocas dentro de proteínas, carboidratos, verduras e legumes, gorduras boas, frutas, café e bebidas, além de refeições práticas para dias corridos."
+      },
+      {
+        question: "Preciso excluir carboidratos?",
+        answer:
+          "Não. O guia apresenta carboidratos como energia do corpo e afirma que é possível variar sem medo, sendo importante não excluir totalmente esse grupo."
+      },
+      {
+        question: "O guia serve para dias corridos?",
+        answer:
+          "Sim. O material inclui opções de refeições práticas para substituir uma refeição, como pão com ovo e salada, iogurte com fruta e shake proteico com fruta."
+      },
+      {
+        question: "Qual é a principal regra do material?",
+        answer:
+          "O guia resume que equilíbrio não é sobre perfeição, mas sobre consistência. Também reforça regras como ter proteína na refeição, não pular refeições e não ficar longos períodos sem comer."
+      }
+    ]
   }
 ];
 
