@@ -10,6 +10,7 @@ interface Props {
 
 const { ebook } = Astro.props;
 const canonical = `https://mulher360.com.br/ebooks/${ebook.slug}`;
+const coverImageSrc = `/images/ebooks/${ebook.slug}.webp`;
 const headerLinks = [
   { label: "Benefícios", href: "#beneficios" },
   { label: "Conteúdo", href: "#conteudo" },
@@ -58,19 +59,15 @@ const footerLinks = [
           </div>
 
           <div class="fade-rise-delay relative mx-auto w-full max-w-[25rem] px-3 sm:px-0">
-            <div class="book-tilt relative rounded-[2rem] border border-[color:var(--line)] bg-[#1f1512] p-4 shadow-[0_40px_80px_rgba(72,37,20,0.28)] sm:p-5">
-              <div class="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,#18110f_0%,#30211c_38%,#bb5b27_100%)] px-5 py-6 text-white sm:px-7 sm:py-8">
-                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[#f7d3ab]">{ebook.cover.brand}</p>
-                <h2 class="mt-6 font-display text-[2rem] font-semibold leading-none sm:mt-8 sm:text-5xl">
-                  {ebook.cover.title}
-                </h2>
-                <p class="mt-4 max-w-xs text-sm leading-6 text-white/80">
-                  {ebook.cover.subtitle}
-                </p>
-                <div class="mt-8 rounded-[1.25rem] border border-white/15 bg-white/10 p-4 sm:mt-10">
-                  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-[#f7d3ab]">{ebook.cover.signedByLabel}</p>
-                  <p class="mt-2 text-lg font-semibold">{ebook.cover.signedBy}</p>
-                </div>
+            <div class="book-tilt relative rounded-[2rem] border border-[color:var(--line)] bg-[#1f1512] p-[0.9rem] shadow-[0_40px_80px_rgba(72,37,20,0.28)] sm:p-[1.05rem]">
+              <div class="aspect-[2/3] overflow-hidden rounded-[1.55rem]">
+                <img
+                  src={coverImageSrc}
+                  alt={`Capa do ebook ${ebook.title}`}
+                  class="h-full w-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
