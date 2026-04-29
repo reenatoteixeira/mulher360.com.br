@@ -8,15 +8,6 @@ export interface EbookData {
   priceTo: string;
   catalogDescription: string;
   searchTerms: string[];
-  cover: {
-    brand: string;
-    title: string;
-    titleLine1: string;
-    titleLine2: string;
-    subtitle: string;
-    signedByLabel: string;
-    signedBy: string;
-  };
   hero: {
     eyebrow: string;
     title: string;
@@ -79,15 +70,6 @@ export const ebooks: EbookData[] = [
     catalogDescription:
       "Ebook sobre hidratação estratégica para ajudar o corpo a desinchar, regular sinais e apoiar o emagrecimento com aplicação prática no dia a dia.",
     searchTerms: ["protocolo de hidratacao", "hidratacao", "emagrecimento", "desinchaco", "mulher 360"],
-    cover: {
-      brand: "Mulher 360",
-      title: "Protocolo de Hidratação",
-      titleLine1: "Protocolo",
-      titleLine2: "de Hidratação",
-      subtitle: "Para emagrecimento e desinchaço com uma estratégia simples de aplicar no dia a dia.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Hidratação estratégica para ajudar seu corpo a desinchar, regular sinais e apoiar o emagrecimento.",
@@ -208,15 +190,6 @@ export const ebooks: EbookData[] = [
       "escolhas inteligentes",
       "mulher 360"
     ],
-    cover: {
-      brand: "Mulher 360",
-      title: "Escala do Doce",
-      titleLine1: "Escala",
-      titleLine2: "do Doce",
-      subtitle: "Do melhor ao mais ocasional: escolhas inteligentes para mais equilíbrio e menos culpa.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Aprenda a escolher doces com mais consciência, equilíbrio e menos culpa.",
@@ -340,15 +313,6 @@ export const ebooks: EbookData[] = [
       "escolhas conscientes",
       "mulher 360"
     ],
-    cover: {
-      brand: "Mulher 360",
-      title: "Guia de Trocas Inteligentes",
-      titleLine1: "Guia de",
-      titleLine2: "Trocas",
-      subtitle: "Substituir e escolher o que te faz bem com praticidade, consciência e equilíbrio.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Trocas inteligentes para transformar sua alimentação sem rigidez.",
@@ -447,6 +411,250 @@ export const ebooks: EbookData[] = [
         question: "Qual é a principal regra do material?",
         answer:
           "A principal ideia é sair da lógica da perfeição e construir consistência com escolhas mais conscientes, simples e sustentáveis."
+      }
+    ]
+  },
+  {
+    slug: "treine-sua-mente",
+    title: "Treine Sua Mente",
+    metaTitle: "Mulher 360 | Treine Sua Mente",
+    description:
+      "Um ebook para ajudar você a identificar padrões mentais que sabotam sua rotina, fortalecer sua consciência nas escolhas e sustentar o emagrecimento de dentro para fora.",
+    checkoutUrl: "https://pay.hotmart.com/R105609089Q",
+    priceFrom: "147,00",
+    priceTo: "97,00",
+    catalogDescription:
+      "Guia para desenvolver uma mente mais alinhada ao emagrecimento, enxergando gatilhos, autossabotagens e decisões automáticas com mais clareza e direção.",
+    searchTerms: [
+      "treine sua mente",
+      "mente",
+      "mentalidade",
+      "emagrecimento",
+      "autossabotagem",
+      "comportamento alimentar",
+      "autoconhecimento",
+      "mulher 360"
+    ],
+    hero: {
+      eyebrow: "Ebook digital",
+      title: "Antes de transformar o corpo, treine a mente que conduz suas escolhas todos os dias.",
+      description:
+        "Um material pensado para quem sente que sabe o que precisa fazer, mas ainda se perde em impulsos, recaídas e ciclos de autossabotagem. A proposta é mostrar como o emagrecimento também passa pela forma como você pensa, sente e reage na rotina.",
+      primaryCta: "Quero acessar o ebook",
+      secondaryCta: "Ver como esse material ajuda"
+    },
+    problem: {
+      title: "Muitas travas no emagrecimento não começam no prato. Começam na mente.",
+      description:
+        "Quando a rotina é guiada por pensamentos automáticos, culpa, impulsividade ou falta de clareza emocional, fica mais difícil sustentar boas escolhas. O resultado costuma ser um ciclo cansativo de tentativa, interrupção e frustração, mesmo quando a intenção de mudar é real."
+    },
+    solution: {
+      title: "Treinar a mente para reduzir autossabotagem e criar mais consistência.",
+      description:
+        "O ebook propõe um olhar mais profundo para os padrões que influenciam seu comportamento, ajudando você a perceber o que te desvia do processo e a construir uma base mental mais firme para emagrecer com consciência e continuidade."
+    },
+    benefits: [
+      {
+        title: "Mais clareza sobre seus gatilhos",
+        text: "Você passa a perceber com mais nitidez o que antecede decisões impulsivas e quais padrões internos costumam desorganizar sua rotina."
+      },
+      {
+        title: "Menos autossabotagem silenciosa",
+        text: "O material ajuda a identificar comportamentos que parecem pequenos no dia a dia, mas que afastam você do resultado quando se repetem."
+      },
+      {
+        title: "Mais força mental para sustentar escolhas",
+        text: "Em vez de depender apenas de motivação, você começa a fortalecer uma postura interna mais alinhada com constância e direção."
+      },
+      {
+        title: "Emagrecimento mais consciente",
+        text: "A proposta é sair do automático e enxergar o processo com mais presença, maturidade e responsabilidade sobre o que você alimenta por dentro e por fora."
+      }
+    ],
+    contentSection: {
+      title: "O que esse ebook te ajuda a destravar.",
+      description:
+        "Sem expor tudo logo de cara, o material foi estruturado para provocar percepção, aprofundar consciência e abrir espaço para uma mudança mais consistente na forma como você conduz o processo.",
+      points: [
+        "Reflexões guiadas para reconhecer padrões mentais que dificultam constância e emagrecimento",
+        "Um novo olhar sobre gatilhos emocionais, pensamentos automáticos e decisões repetidas no dia a dia",
+        "Direcionamentos para fortalecer sua mentalidade sem depender apenas de motivação momentânea",
+        "Uma base mais consciente para alinhar mente, comportamento e corpo no mesmo sentido"
+      ]
+    },
+    author: {
+      name: "Dra. Luciana Teixeira",
+      roleDescription:
+        "Nutricionista com foco no cuidado integral da mulher, unindo ciência, empatia e propósito em uma abordagem que considera corpo, mente e espírito.",
+      bio:
+        "Pós-graduanda em Neurociência e estudante de Educação Física e Fonoaudiologia, desenvolveu o projeto Mulher 360 para ajudar mulheres a resgatarem a autoestima, reconectarem-se com sua essência e construírem uma relação mais consciente com a alimentação.",
+      imageSrc: "/images/autora.png",
+      imageAlt: "Dra. Luciana Teixeira"
+    },
+    offer: {
+      title: "Um guia para fortalecer a mente que sustenta o emagrecimento.",
+      description: "Acesso digital imediato após a compra.",
+      primaryCta: "Quero garantir meu acesso",
+      secondaryCta: "Ver perguntas frequentes",
+      deliverables: [
+        "Ebook Treine Sua Mente, em formato digital.",
+        "Conteúdo voltado para autoconhecimento, percepção de gatilhos e fortalecimento mental no processo de emagrecimento.",
+        "Um material direto para apoiar escolhas mais conscientes e uma rotina com menos autossabotagem."
+      ]
+    },
+    finalCta: {
+      title: "Seu corpo segue a direção que sua mente sustenta todos os dias.",
+      description:
+        "Se você sente que o maior bloqueio não é falta de informação, mas dificuldade de se manter no processo, esse ebook pode ser o ponto de virada para começar de dentro para fora.",
+      primaryCta: "Quero acessar o ebook"
+    },
+    faqs: [
+      {
+        question: "Esse ebook é sobre emagrecimento ou sobre mente?",
+        answer:
+          "Sobre os dois. A proposta é mostrar que o emagrecimento não depende apenas do que você come, mas também da forma como pensa, reage e sustenta suas escolhas ao longo da rotina."
+      },
+      {
+        question: "O material substitui acompanhamento profissional?",
+        answer:
+          "Não. O ebook é um recurso educativo para ampliar consciência e direcionamento, mas não substitui acompanhamento individualizado quando ele for necessário."
+      },
+      {
+        question: "Vou encontrar estratégias práticas ou só reflexões?",
+        answer:
+          "O conteúdo foi pensado para ir além de frases motivacionais. Ele provoca reflexão, mas também direciona um novo posicionamento mental diante da sua rotina e do seu processo."
+      },
+      {
+        question: "Esse ebook é para quem vive começando e parando?",
+        answer:
+          "Sim. Ele conversa especialmente com quem sente dificuldade de manter constância, cai em autossabotagem com frequência ou percebe que o emocional interfere muito nas escolhas."
+      },
+      {
+        question: "Como recebo o material?",
+        answer:
+          "Após a confirmação da compra, o acesso ao ebook é liberado em formato digital."
+      }
+    ]
+  },
+  {
+    slug: "como-cuidar-do-corpo-sem-culpa",
+    title: "Como Cuidar do Corpo Sem Culpa",
+    metaTitle: "Mulher 360 | Como Cuidar do Corpo Sem Culpa",
+    description:
+      "Um ebook para ajudar você a reconstruir a relação com o próprio corpo, cuidar de si com mais leveza e sair do ciclo de cobrança, culpa e desconexão.",
+    checkoutUrl: "https://pay.hotmart.com/O105609260P",
+    priceFrom: "67,00",
+    priceTo: "27,00",
+    catalogDescription:
+      "Guia para desenvolver uma relação mais gentil e consciente com o corpo, reduzindo culpa, cobranças e padrões que travam o autocuidado.",
+    searchTerms: [
+      "cuidar do corpo sem culpa",
+      "corpo sem culpa",
+      "autocuidado",
+      "culpa",
+      "imagem corporal",
+      "autoestima",
+      "relação com o corpo",
+      "mulher 360"
+    ],
+    hero: {
+      eyebrow: "Ebook digital",
+      title: "Seu corpo não precisa de mais punição. Precisa de cuidado, presença e reconexão.",
+      description:
+        "Um material para mulheres que estão cansadas de viver o autocuidado a partir da culpa, da cobrança ou da sensação de nunca serem suficientes. A proposta é abrir um caminho mais leve para olhar o corpo com mais respeito, consciência e verdade.",
+      primaryCta: "Quero acessar o ebook",
+      secondaryCta: "Ver como esse material ajuda"
+    },
+    problem: {
+      title: "Quando o cuidado nasce da culpa, ele raramente se sustenta.",
+      description:
+        "Muitas mulheres tentam mudar o corpo enquanto se criticam o tempo todo. Nesse cenário, alimentação, rotina e autocuidado deixam de ser expressão de amor-próprio e viram compensação, castigo ou cobrança. Isso desgasta emocionalmente e dificulta a construção de uma relação mais saudável consigo mesma."
+    },
+    solution: {
+      title: "Trocar a culpa por consciência para cuidar do corpo com mais verdade.",
+      description:
+        "O ebook propõe uma virada de perspectiva: sair da lógica da autocobrança constante e começar a cultivar uma relação mais madura, gentil e consistente com o próprio corpo, sem romantizar o processo e sem reforçar violência interna."
+    },
+    benefits: [
+      {
+        title: "Menos culpa no autocuidado",
+        text: "Você começa a reconhecer padrões de cobrança que contaminam suas escolhas e enfraquecem sua relação com o próprio corpo."
+      },
+      {
+        title: "Mais gentileza sem perder direção",
+        text: "O material ajuda a construir um olhar mais acolhedor, sem confundir leveza com desistência ou falta de compromisso consigo mesma."
+      },
+      {
+        title: "Reconexão com o corpo real",
+        text: "A proposta é sair da guerra interna e desenvolver mais presença para ouvir o corpo com menos ruído, comparação e rejeição."
+      },
+      {
+        title: "Autocuidado mais sustentável",
+        text: "Quando o cuidado deixa de ser punição, ele tem mais chance de virar constância, e não apenas esforço momentâneo."
+      }
+    ],
+    contentSection: {
+      title: "O que esse ebook convida você a enxergar.",
+      description:
+        "Em vez de entregar tudo de forma óbvia, o material foi estruturado para despertar percepção, aliviar pesos desnecessários e fortalecer uma relação mais consciente com o corpo.",
+      points: [
+        "Reflexões sobre culpa, cobrança e padrões que distorcem a forma como você se enxerga",
+        "Um convite para repensar o autocuidado sem violência interna nem exigência impossível",
+        "Direcionamentos para cultivar mais presença, respeito e reconexão com o corpo real",
+        "Uma nova base emocional para cuidar de si com mais consistência e menos sofrimento"
+      ]
+    },
+    author: {
+      name: "Dra. Luciana Teixeira",
+      roleDescription:
+        "Nutricionista com foco no cuidado integral da mulher, unindo ciência, empatia e propósito em uma abordagem que considera corpo, mente e espírito.",
+      bio:
+        "Pós-graduanda em Neurociência e estudante de Educação Física e Fonoaudiologia, desenvolveu o projeto Mulher 360 para ajudar mulheres a resgatarem a autoestima, reconectarem-se com sua essência e construírem uma relação mais consciente com a alimentação.",
+      imageSrc: "/images/autora.png",
+      imageAlt: "Dra. Luciana Teixeira"
+    },
+    offer: {
+      title: "Um guia para cuidar do corpo com mais leveza e menos culpa.",
+      description: "Pagamento promocional e acesso digital imediato após a compra.",
+      primaryCta: "Quero garantir meu acesso",
+      secondaryCta: "Ver perguntas frequentes",
+      deliverables: [
+        "Ebook Como Cuidar do Corpo Sem Culpa, em formato digital.",
+        "Conteúdo voltado para reconexão corporal, autocuidado consciente e redução de culpa.",
+        "Um material direto para ajudar você a sair da cobrança e construir um cuidado mais sustentável."
+      ]
+    },
+    finalCta: {
+      title: "Cuidar do corpo pode deixar de ser um peso e voltar a ser um gesto de respeito por você.",
+      description:
+        "Se hoje o autocuidado parece vir misturado com culpa, rejeição ou cobrança excessiva, esse ebook pode ajudar você a iniciar uma relação mais leve e verdadeira com o próprio corpo.",
+      primaryCta: "Quero acessar o ebook"
+    },
+    faqs: [
+      {
+        question: "Esse ebook é sobre autoestima ou sobre alimentação?",
+        answer:
+          "Ele conversa com a relação que você constrói com o próprio corpo, e isso naturalmente toca autoestima, autocuidado e a forma como suas escolhas acontecem no dia a dia."
+      },
+      {
+        question: "A proposta é parar de querer mudar o corpo?",
+        answer:
+          "Não. A proposta é questionar a culpa e a violência interna como base da mudança, para que o cuidado aconteça com mais consciência e menos sofrimento."
+      },
+      {
+        question: "Vou encontrar reflexões ou orientações práticas?",
+        answer:
+          "O material foi pensado para provocar percepção e também direcionar um novo jeito de se posicionar diante do próprio corpo e do autocuidado."
+      },
+      {
+        question: "Esse ebook é para quem vive se cobrando demais?",
+        answer:
+          "Sim. Ele faz sentido especialmente para mulheres que sentem que a relação com o corpo está atravessada por culpa, comparação, exigência e desconexão."
+      },
+      {
+        question: "Como recebo o material?",
+        answer:
+          "Após a confirmação da compra, o acesso ao ebook é liberado em formato digital."
       }
     ]
   }
