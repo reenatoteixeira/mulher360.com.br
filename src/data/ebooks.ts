@@ -8,15 +8,6 @@ export interface EbookData {
   priceTo: string;
   catalogDescription: string;
   searchTerms: string[];
-  cover: {
-    brand: string;
-    title: string;
-    titleLine1: string;
-    titleLine2: string;
-    subtitle: string;
-    signedByLabel: string;
-    signedBy: string;
-  };
   hero: {
     eyebrow: string;
     title: string;
@@ -79,15 +70,6 @@ export const ebooks: EbookData[] = [
     catalogDescription:
       "Ebook sobre hidratação estratégica para ajudar o corpo a desinchar, regular sinais e apoiar o emagrecimento com aplicação prática no dia a dia.",
     searchTerms: ["protocolo de hidratacao", "hidratacao", "emagrecimento", "desinchaco", "mulher 360"],
-    cover: {
-      brand: "Mulher 360",
-      title: "Protocolo de Hidratação",
-      titleLine1: "Protocolo",
-      titleLine2: "de Hidratação",
-      subtitle: "Para emagrecimento e desinchaço com uma estratégia simples de aplicar no dia a dia.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Hidratação estratégica para ajudar seu corpo a desinchar, regular sinais e apoiar o emagrecimento.",
@@ -208,15 +190,6 @@ export const ebooks: EbookData[] = [
       "escolhas inteligentes",
       "mulher 360"
     ],
-    cover: {
-      brand: "Mulher 360",
-      title: "Escala do Doce",
-      titleLine1: "Escala",
-      titleLine2: "do Doce",
-      subtitle: "Do melhor ao mais ocasional: escolhas inteligentes para mais equilíbrio e menos culpa.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Aprenda a escolher doces com mais consciência, equilíbrio e menos culpa.",
@@ -340,15 +313,6 @@ export const ebooks: EbookData[] = [
       "escolhas conscientes",
       "mulher 360"
     ],
-    cover: {
-      brand: "Mulher 360",
-      title: "Guia de Trocas Inteligentes",
-      titleLine1: "Guia de",
-      titleLine2: "Trocas",
-      subtitle: "Substituir e escolher o que te faz bem com praticidade, consciência e equilíbrio.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Trocas inteligentes para transformar sua alimentação sem rigidez.",
@@ -471,15 +435,6 @@ export const ebooks: EbookData[] = [
       "autoconhecimento",
       "mulher 360"
     ],
-    cover: {
-      brand: "Mulher 360",
-      title: "Treine Sua Mente",
-      titleLine1: "Treine",
-      titleLine2: "Sua Mente",
-      subtitle: "Emagreça seu corpo fortalecendo a forma como você pensa, decide e sustenta suas escolhas.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Antes de transformar o corpo, treine a mente que conduz suas escolhas todos os dias.",
@@ -582,9 +537,9 @@ export const ebooks: EbookData[] = [
     ]
   },
   {
-    slug: "cuidar-do-corpo-sem-culpa",
-    title: "Cuidar do Corpo Sem Culpa",
-    metaTitle: "Mulher 360 | Cuidar do Corpo Sem Culpa",
+    slug: "como-cuidar-do-corpo-sem-culpa",
+    title: "Como Cuidar do Corpo Sem Culpa",
+    metaTitle: "Mulher 360 | Como Cuidar do Corpo Sem Culpa",
     description:
       "Um ebook para ajudar você a reconstruir a relação com o próprio corpo, cuidar de si com mais leveza e sair do ciclo de cobrança, culpa e desconexão.",
     checkoutUrl: "https://pay.hotmart.com/O105609260P",
@@ -602,15 +557,6 @@ export const ebooks: EbookData[] = [
       "relação com o corpo",
       "mulher 360"
     ],
-    cover: {
-      brand: "Mulher 360",
-      title: "Cuidar do Corpo Sem Culpa",
-      titleLine1: "Cuidar do Corpo",
-      titleLine2: "Sem Culpa",
-      subtitle: "Um novo olhar para o autocuidado, com mais gentileza, consciência e menos cobrança.",
-      signedByLabel: "Assinado por",
-      signedBy: "Dra. Luciana Teixeira"
-    },
     hero: {
       eyebrow: "Ebook digital",
       title: "Seu corpo não precisa de mais punição. Precisa de cuidado, presença e reconexão.",
@@ -673,7 +619,7 @@ export const ebooks: EbookData[] = [
       primaryCta: "Quero garantir meu acesso",
       secondaryCta: "Ver perguntas frequentes",
       deliverables: [
-        "Ebook Cuidar do Corpo Sem Culpa, em formato digital.",
+        "Ebook Como Cuidar do Corpo Sem Culpa, em formato digital.",
         "Conteúdo voltado para reconexão corporal, autocuidado consciente e redução de culpa.",
         "Um material direto para ajudar você a sair da cobrança e construir um cuidado mais sustentável."
       ]
